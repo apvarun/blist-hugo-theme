@@ -35,6 +35,9 @@ title = "Blist Theme"
 [build]
   writeStats = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 # syntax highlight settings
 [markup]
   [markup.highlight]
