@@ -1,0 +1,9 @@
+<section class="bg-pink-50 dark:bg-gray-900">
+  <div class="container max-w-screen-lg mx-auto px-6 py-12 grid grid-cols-2 gap-4 lg:gap-16 items-center">
+    <div>
+      <h1 class="text-4xl font-bold mb-4">{{ .Site.Params.homepage.title }}</h1>
+      <p class="font-light text-lg">{{ .Site.Params.homepage.description }}</p>
+    </div>
+    <img class="rounded-lg shadow-sm" src="{{ .Site.Params.homepage.photo }}" />
+  </div>
+</section>
