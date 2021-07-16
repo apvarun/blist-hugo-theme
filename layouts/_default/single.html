@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+  {{ if .Params.thumbnail }}
+  <div class="relative max-w-5xl mx-auto px-4">
+    <img src="{{ .Params.thumbnail }}" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
+      {{ .Params.date.Format "January 2, 2006" }}
+    </div>
+  </div>
+  {{ end }}
+
+  <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
+
+    <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
+
+    {{ .Content }}
+  </article>
+
+  {{- partial "social.html" . -}}
+{{ end }}

@@ -9,7 +9,7 @@
   "scripts": {
     "start": "hugo --gc",
     "dev": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
-    "build": "NODE_ENV=production hugo -s exampleSite --themesDir=../.."
+    "build": "NODE_ENV=production hugo -s exampleSite --themesDir=../.. --gc"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",

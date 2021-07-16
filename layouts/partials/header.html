@@ -1,11 +1,19 @@
-<header class="container flex justify-between gap-4 flex-wrap p-6 mx-auto">
+<header class="container flex justify-around md:justify-between gap-4 flex-wrap p-6 mx-auto">
   <a href="{{ .Site.Home.Permalink }}" class="capitalize font-extrabold text-2xl">
     {{ .Site.Title }}
   </a>
-  <ul>
-    
+  <ul class="flex items-center gap-4 lg:gap-6">
+
+    {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+
+    {{ range .Site.Sections }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+
     {{ if .Site.Params.darkModeToggle }}
-    <li>
+    <li class="grid place-items-center">
       <span class="toggle-dark-mode inline-block cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
           stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
