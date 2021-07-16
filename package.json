@@ -1,7 +1,7 @@
 {
   "name": "blist",
   "version": "1.0.0",
-  "description": "Modern personal blog theme for your Hugo site.",
+  "description": "Blist is a clean and fast blog theme for your Hugo site.",
   "main": "index.js",
   "repository": "https://github.com/apvarun/blist-hugo-theme",
   "author": "Varun A P",
