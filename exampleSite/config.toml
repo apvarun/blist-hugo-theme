@@ -1,0 +1,44 @@
+theme = "blist"
+languageCode = "en-US"
+baseurl = "https://blist.vercel.app"
+title = "Blist Theme"
+
+[params]
+  name = "Blist Theme"
+  description = "Modern blog theme for your Hugo site."
+  
+  # Enable the darkmode toggle in header
+  darkModeToggle = true
+
+  # Custom copyright - optional
+  copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
+  favicon = "favicon.svg"
+
+[params.homepage]
+  title = "Hey! I'm Katheryn Fox"
+  description = "26 y/o junior developer who enjoys social card games, blogging and painting"
+  photo = "/picture.jpg"
+
+[params.homepage.social]
+  description = "I work on everything coding and tweet developer memes"
+  twitter = "https://twitter.com/"
+  linkedin = "https://linkedin.com/in/"
+  github = "https://github.com/"
+  medium = "https://medium.com/"
+  reddit = "https://reddit.com/"
+  dribbble = "https://dribbble.com/"
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+
+[build]
+  writeStats = true
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true

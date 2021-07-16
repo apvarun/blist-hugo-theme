@@ -1,4 +1,4 @@
 ---
-author: John Doe
+author: Katheryn Fox
 title: Blog
 ---

@@ -1,6 +1,6 @@
 ---
-author: John Doe
-title: Home of John Doe 👋
+author: Katheryn Fox
+title: Home of Katheryn Fox
 date: 2021-07-15
 ---
 

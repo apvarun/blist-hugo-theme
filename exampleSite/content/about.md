@@ -1,5 +1,5 @@
 ---
-author: John Doe
+author: Katheryn Fox
 title: About Me
 date: 2021-07-15
 description:
