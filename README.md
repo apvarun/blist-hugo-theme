@@ -10,12 +10,14 @@ Blist is a clean and fast blog theme for your Hugo site.
 
 **Features:**
 
-- Responsive content
+- Responsive content / Mobile-optimized
 - Blog pagination
 - Text Search
 - Social links
+- Code highlighting
 - Dark mode
 - Fast performance
+- SEO optimized
 
 ## Preview
 
