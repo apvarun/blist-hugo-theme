@@ -80,11 +80,11 @@ From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and
 
 Menu in Blist theme is pre-set to have all section names. You can include custom links in header using the `menu.main` option config.toml.
 
-## Darkmode
+### Darkmode
 
 `[params.darkModeToggle]` enables the dark mode toggle in header. The preference is then saved so that the mode is automatically chosen for return visits.
 
-## Search
+### Search
 
 `[params.enableSearch]` option is used to enable search option in the theme.
 
