@@ -4,8 +4,8 @@ baseurl = "https://blist.vercel.app"
 title = "Blist Theme"
 
 [params]
-  name = "Blist Theme"
   description = "Modern blog theme for your Hugo site."
+  name = "Blist Theme"
   
   # Enable the darkmode toggle in header
   darkModeToggle = true
