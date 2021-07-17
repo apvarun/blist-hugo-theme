@@ -8,6 +8,7 @@ module.exports = {
       themeDir + "content/**/*.html",
       "layouts/**/*.html",
       "content/**/*.html",
+      "assets/js/search.js",
       "exampleSite/layouts/**/*.html",
       "exampleSite/content/**/*.html",
     ],

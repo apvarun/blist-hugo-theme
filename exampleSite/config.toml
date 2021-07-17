@@ -9,6 +9,9 @@ title = "Blist Theme"
   
   # Enable the darkmode toggle in header
   darkModeToggle = true
+  
+  # Enable search in header
+  enableSearch = true
 
   # Custom copyright - optional
   copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
