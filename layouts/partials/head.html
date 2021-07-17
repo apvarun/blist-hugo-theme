@@ -7,9 +7,7 @@
   <title>
     {{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}
   </title>
-  {{- if .Description }}
-  <meta name="description" content="{{ .Description }}" />
-  {{ end -}}
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />
   {{- if .Keywords }}
   <meta name="keywords" content="{{ delimit .Keywords "," }}" />
   {{ end -}}

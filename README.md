@@ -12,8 +12,10 @@ Blist is a clean and fast blog theme for your Hugo site.
 
 - Responsive content
 - Blog pagination
+- Text Search
 - Social links
 - Dark mode
+- Fast performance
 
 ## Preview
 
@@ -43,7 +45,6 @@ Blist theme ships with an fully configured example site. For a quick preview:
 
 Copy the `package.json` file from `themes/showcase` folder to your hugo website root folder, and run `npm install`.
 
-
 ```sh
 cd themes/blist/exampleSite/
 hugo serve --themesDir ../..
@@ -68,7 +69,7 @@ The following explains how to add content to your Hugo site. You can find sample
     ├── blog       # Blog Section
     │   ├── post1   # Post 1
     │   ├── post2   # Post 2
-    │   └── _index     
+    │   └── _index
     └── ...
 
 ## Configure your site
@@ -79,13 +80,40 @@ From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and
 
 Menu in Blist theme is pre-set to have all section names. You can include custom links in header using the `menu.main` option config.toml.
 
+## Darkmode
+
+`[params.darkModeToggle]` enables the dark mode toggle in header. The preference is then saved so that the mode is automatically chosen for return visits.
+
+## Search
+
+`[params.enableSearch]` option is used to enable search option in the theme.
+
+- Adds the search icon in header
+- Generates the search index
+- Uses fuse.js to enable searching through content
+
+In order to search, you can either click on the search icon from header or press `Ctrl/Cmd + /` key combination.
+
+**Note:**
+
+Make sure to enable JSON in outputs array.
+
+```
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+```
+
 ### Latex
 
 Enable Mathematical options: set `math: true` in your markdown frontmatter
 
-## Google Analytics
+### Google Analytics
 
 Set `googleAnalytics` in `config.toml` to activate Hugo's [internal Google Analytics template](https://gohugo.io/templates/internal/#google-analytics).
+
+## Performance
+
+[![Pagespeed Insights Performance](https://github.com/apvarun/blist-hugo-theme/raw/main/images/pagespeed-performance.png)](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fblist.vercel.app&tab=mobile)
 
 ## Issues
 
