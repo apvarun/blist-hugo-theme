@@ -15,6 +15,7 @@ Blist is a clean and fast blog theme for your Hugo site.
 - Text Search
 - Social links
 - Code highlighting
+- Color customization
 - Dark mode
 - Fast performance
 - SEO optimized
@@ -85,6 +86,12 @@ Menu in Blist theme is pre-set to have all section names. You can include custom
 ### Darkmode
 
 `[params.darkModeToggle]` enables the dark mode toggle in header. The preference is then saved so that the mode is automatically chosen for return visits.
+
+### Customize Ascent Color
+
+Use `[params.ascentColor]` to change the default `pink` color to any supported color from the [list of default colors](https://tailwindcss.com/docs/customizing-colors) from Tailwind CSS.
+
+Some example values: bg-blue-200, bg-yellow-300
 
 ### Search
 
