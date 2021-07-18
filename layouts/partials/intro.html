@@ -1,4 +1,4 @@
-<section class="bg-pink-50 dark:bg-gray-900">
+<section class="{{ .Site.Params.ascentColor | default "bg-pink-50" }} dark:bg-gray-900">
   <div class="container max-w-screen-lg mx-auto px-6 py-12 grid md:grid-cols-2 gap-4 lg:gap-16 items-center">
     <div>
       <h1 class="text-4xl font-bold mb-4">{{ .Site.Params.homepage.title }}</h1>
