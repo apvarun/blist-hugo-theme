@@ -28,6 +28,7 @@ title = "Blist Theme"
   photo = "/picture.jpg"
 
 [params.homepage.social]
+  title = "Follow me"
   description = "I work on everything coding and tweet developer memes"
   twitter = "https://twitter.com/"
   linkedin = "https://linkedin.com/in/"
