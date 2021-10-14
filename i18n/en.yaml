@@ -1,14 +1,8 @@
 # Content
-- id: dateFormat
-  translation: "January 2, 2006"
-- id: shortdateFormat
-  translation: "Jan 2, 06"
-- id: shortdatetimeFormat
-  translation: "Jan 2, 2006 15:04:05"
 - id: postedOnDate
-  translation: "Posted on {{ .Count }}"
+  translation: "Posted on {{ . }}"
 - id: lastModified
-  translation: "(Last modified on {{ .Count }})"
+  translation: "(Last modified on {{ . }})"
 - id: translationsLabel
   translation: "Other languages: "
 - id: translationsSeparator

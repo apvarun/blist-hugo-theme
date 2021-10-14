@@ -63,7 +63,7 @@ DefaultContentLanguageInSubdir = true
 
   # Custom copyright - optional
   copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
-  favicon = "favicon.svg"
+  favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors

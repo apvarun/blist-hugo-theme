@@ -1,14 +1,8 @@
 # Content
-- id: dateFormat
-  translation: "02.01.2006"
-- id: shortdateFormat
-  translation: "2 Jan. 06"
-- id: shortdatetimeFormat
-  translation: "2 Jan. 2006 15:04:05"
 - id: postedOnDate
-  translation: "Gepostet am {{ .Count }}"
+  translation: "Gepostet am {{ . }}"
 - id: lastModified
-  translation: "(Zuletzt geändert am {{ .Count }})"
+  translation: "(Zuletzt geändert am {{ . }})"
 - id: translationsLabel
   translation: "Andere Sprachen: "
 - id: translationsSeparator
@@ -28,6 +22,31 @@
 - id: words
   translation: "Wörter"
 
+# Date
+- id: January
+  translation: "Januar"
+- id: February
+  translation: "Februar"
+- id: March
+  translation: "März"
+- id: April
+  translation: "April"
+- id: May
+  translation: "Mai"
+- id: June
+  translation: "Juni"
+- id: July
+  translation: "Juli"
+- id: August
+  translation: "August"
+- id: September
+  translation: "September"
+- id: October
+  translation: "Oktober"
+- id: November
+  translation: "November"
+- id: December
+  translation: "Dezember"
 
 # 404 page
 - id: pageNotFound

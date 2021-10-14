@@ -1,10 +1,12 @@
 {{ define "main" }}
+  {{ $lastmodstr := (partial "date.html" (dict "date" .Lastmod "language" $.Page.Language "format" "long")) }}
+  {{ $datestr := (partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "long")) }}
 
   {{ if .Params.thumbnail }}
   <div class="relative max-w-5xl mx-auto px-4">
     <img src="{{ .Params.thumbnail }}" class="rounded-lg shadow-sm w-full object-contain" />
     <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
-      {{ .Params.date.Format "January 2, 2006" }}
+      {{ $datestr }}
     </div>
   </div>
   {{ end }}
@@ -12,6 +14,23 @@
   <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
 
     <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
+    <h5 class="text-sm">
+      <i class="fas fa-calendar"></i>&nbsp;{{ $datestr | i18n "postedOnDate" }}
+      {{ if ne $datestr $lastmodstr }}
+        &nbsp{{ $lastmodstr | i18n "lastModified" }}<br/>
+      {{ else }}
+        &nbsp;&bull;&nbsp;
+      {{ end }}
+      <i class="fas fa-clock"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
+      &nbsp;&bull;&nbsp;<i class="fas fa-book"></i>&nbsp;{{ .WordCount }}&nbsp;{{ i18n "words" }}
+      {{ if .IsTranslated -}}
+        {{- $sortedTranslations := sort .Translations "Site.Language.Weight" -}}
+        {{- $links := apply $sortedTranslations "partial" "translation_link.html" "." -}}
+        {{- $cleanLinks := apply $links "chomp" "." -}}
+        {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator") -}}
+        &nbsp;&bull;&nbsp;{{ i18n "translationsLabel" }}{{ $linksOutput }}
+      {{- end }}
+    </h5>
 
     {{ .Content }}
   </article>
