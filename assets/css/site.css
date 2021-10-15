@@ -53,3 +53,50 @@ body {
     /* Safari, Android, iOS */ url("/fonts/inter-v3-latin-700.svg#Inter")
       format("svg"); /* Legacy iOS */
 }
+
+/* Multi-level navigation links */
+.navlinks-container {
+  position: relative;
+}
+.navlinks-parent:after {
+  content: " \25BC";
+}
+.navlinks-children {
+  width: 100%;
+  display: none;
+  word-break: break-word;
+}
+.navlinks-container .navlinks-children a {
+  display: block;
+  padding: 10px;
+  padding-left: 30px;
+  background: #1F2937;
+  text-decoration: none !important;
+  border-width: 0;
+  font-weight: normal;
+}
+@media only screen and (max-width: 767px) {
+  .navlinks-container.show-children {
+  }
+  .navlinks-container.show-children .navlinks-children {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navlinks-container {
+    text-align: center;
+  }
+  .navlinks-container:hover {
+  }
+  .navlinks-container:hover .navlinks-children {
+    display: block;
+  }
+  .navlinks-children {
+    position: absolute;
+  }
+  .navlinks-container .navlinks-children a {
+    padding-left: 10px;
+    border: 1px solid #111827;
+    border-width: 0 1px 1px 1px;
+  }
+}
