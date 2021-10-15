@@ -2,7 +2,7 @@
   <a href="{{ .Site.Home.Permalink }}" class="capitalize font-extrabold text-2xl">
     {{ .Site.Title }}
   </a>
-  <ul class="flex items-center gap-4 lg:gap-6">
+  <ul class="flex items-center gap-4 lg:gap-6 navbar">
 
     {{ range .Site.Menus.main }}
       <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
@@ -11,7 +11,7 @@
     {{ if .Site.IsMultiLingual }}
       {{ if ge (len .Site.Languages) 3 }}
         <li class="navlinks-container">
-          <a class="navlinks-parent">{{ i18n "languageSwitcherLabel" }}</a>
+          <i class="fas fa-globe"></i>&nbsp;<a class="navlinks-parent">{{ i18n "languageSwitcherLabel" }}</a>
           <div class="navlinks-children">
             {{ range .Site.Languages }}
               {{ if not (eq .Lang $.Site.Language.Lang) }}
@@ -21,13 +21,15 @@
           </div>
         </li>
       {{ else }}
-        [<li>
+        <li>
           {{ range .Site.Languages }}
             {{ if not (eq .Lang $.Site.Language.Lang) }}
-              <a href="/{{ .Lang }}" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
+              <i class="fas fa-globe"></i>&nbsp;<a href="/{{ .Lang }}" lang="{{ .Lang }}">{{ default .Lang
+          .LanguageName
+          }}</a>
             {{ end }}
           {{ end }}
-        </li>]
+        </li>
       {{ end }}
     {{ end }}
 
