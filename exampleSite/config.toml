@@ -16,7 +16,7 @@ DefaultContentLanguageInSubdir = true
       introPhoto = "/picture.jpg"
     [[languages.en.menu.main]]
         name = "Blog"
-        url = ""
+        url = "blog"
         weight = 1
 
     [[languages.en.menu.main]]
@@ -41,7 +41,7 @@ DefaultContentLanguageInSubdir = true
       introPhoto = "/picture.jpg"
     [[languages.de.menu.main]]
         name = "Blog"
-        url = ""
+        url = "blog"
         weight = 1
 
     [[languages.de.menu.main]]
@@ -55,9 +55,9 @@ DefaultContentLanguageInSubdir = true
         weight = 3
 
   [languages.dy]
-    contentDir = "content/en" #English
+    contentDir = "content/dy" #English
     weight = 3
-    languageName = "Dummy"
+    languageName = "Test Language"
 
 [params]
   # Enable the darkmode toggle in header
