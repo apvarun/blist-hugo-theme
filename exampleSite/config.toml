@@ -55,7 +55,7 @@ DefaultContentLanguageInSubdir = true
         weight = 3
 
   [languages.dy]
-    contentDir = "content/dy" #English
+    contentDir = "content/dy" #Example language
     weight = 3
     languageName = "Test Language"
 
@@ -76,6 +76,7 @@ DefaultContentLanguageInSubdir = true
   ascentColor = "bg-blue-100"
 
 [params.homepage.social]
+  # Global params xommon for both languages
   title = "Follow me"
   description = "I work on everything coding and tweet developer memes"
   twitter = "https://twitter.com/"
