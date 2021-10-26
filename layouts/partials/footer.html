@@ -7,8 +7,9 @@
     {{ end }}
   </span>
   <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 15l-6 -6l-6 6h12" />
     </svg>
   </span>
@@ -19,6 +20,23 @@
 {{ end }}
 
 {{ template "_internal/google_analytics_async.html" . }}
+
+{{ if ge (len .Site.Languages) 3 }}
+<script>
+  const languageMenuButton = document.querySelector('.language-switcher');
+  const languageDropdown = document.querySelector('.language-dropdown');
+  languageMenuButton.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    if (languageDropdown.classList.contains('hidden')) {
+      languageDropdown.classList.remove('hidden')
+      languageDropdown.classList.add('flex')
+    } else {
+      languageDropdown.classList.add('hidden');
+      languageDropdown.classList.remove('flex');
+    }
+  })
+</script>
+{{ end }}
 
 {{ if .Site.Params.darkModeToggle }}
 <script>
@@ -38,7 +56,7 @@
   }
 
   const isDark = localStorage.getItem('darkmode');
-  if(isDark && isDark === 'dark') {
+  if (isDark && isDark === 'dark') {
     toggleDarkMode();
   }
 </script>

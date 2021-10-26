@@ -1,12 +1,65 @@
-theme = "blist"
-languageCode = "en-US"
 baseurl = "https://blist.vercel.app"
-title = "Blist Theme"
+metaDataFormat = "yaml"
+title = "Blist Multilingual Theme"
+theme = "blist"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+[languages]
+  [languages.en]
+    contentDir = "content/en" #English
+    weight = 1
+    languageName = "English"
+    [languages.en.params]
+      introTitle = "Hey! I'm Katheryn Fox"
+      introSubtitle = "26 y/o junior developer who enjoys social card games, blogging and painting"
+      introPhoto = "/picture.jpg"
+    [[languages.en.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
+
+    [[languages.en.menu.main]]
+        name = "About"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.en.menu.main]]
+        name = "Tags"
+        url = "tags"
+        weight = 3
+
+  [languages.de]
+    contentDir = "content/de" # Deutsch
+    weight = 2
+    languageName = "Deutsch"
+    title = "Blist (mehrsprachig)"
+    description = "Modernes Blog-Theme für Ihre Hugo-Site."
+    [languages.de.params]
+      introTitle = "Hallo, ich bin Katheryn Fox"
+      introSubtitle = "26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen, Bloggen und Malen hat"
+      introPhoto = "/picture.jpg"
+    [[languages.de.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
+
+    [[languages.de.menu.main]]
+        name = "Über mich"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.de.menu.main]]
+        name = "Tags"
+        url = "tags"
+        weight = 3
+
+  [languages.dy]
+    contentDir = "content/dy" #Example language
+    weight = 3
+    languageName = "Test Language"
 
 [params]
-  description = "Modern blog theme for your Hugo site."
-  name = "Blist Theme"
-  
   # Enable the darkmode toggle in header
   darkModeToggle = true
   
@@ -15,19 +68,15 @@ title = "Blist Theme"
 
   # Custom copyright - optional
   copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
-  favicon = "favicon.svg"
+  favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
   # Reference: https://tailwindcss.com/docs/customizing-colors
   ascentColor = "bg-blue-100"
 
-[params.homepage]
-  title = "Hey! I'm Katheryn Fox"
-  description = "26 y/o junior developer who enjoys social card games, blogging and painting"
-  photo = "/picture.jpg"
-
 [params.homepage.social]
+  # Global params xommon for both languages
   title = "Follow me"
   description = "I work on everything coding and tweet developer memes"
   twitter = "https://twitter.com/"

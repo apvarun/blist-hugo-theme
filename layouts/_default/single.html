@@ -1,10 +1,12 @@
 {{ define "main" }}
+  {{ $lastmodstr := (partial "date.html" (dict "date" .Lastmod "language" $.Page.Language "format" "long")) }}
+  {{ $datestr := (partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "long")) }}
 
   {{ if .Params.thumbnail }}
   <div class="relative max-w-5xl mx-auto px-4">
     <img src="{{ .Params.thumbnail }}" class="rounded-lg shadow-sm w-full object-contain" />
     <div class="absolute top-4 right-8 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-2 py-0.5">
-      {{ .Params.date.Format "January 2, 2006" }}
+      {{ $datestr }}
     </div>
   </div>
   {{ end }}
@@ -12,6 +14,45 @@
   <article class="prose lg:prose-lg mx-auto my-8 dark:prose-dark px-4">
 
     <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
+    <h5 class="text-sm flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="5" width="16" height="16" rx="2" />
+        <line x1="16" y1="3" x2="16" y2="7" />
+        <line x1="8" y1="3" x2="8" y2="7" />
+        <line x1="4" y1="11" x2="20" y2="11" />
+        <rect x="8" y="15" width="2" height="2" />
+      </svg>
+      {{ $datestr | i18n "postedOnDate" }}
+      {{ if ne $datestr $lastmodstr }}
+        &nbsp{{ $lastmodstr | i18n "lastModified" }}<br/>
+      {{ else }}
+        &nbsp;&bull;&nbsp;
+      {{ end }}
+      <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 7 12 12 15 15" />
+      </svg>
+      {{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
+      &nbsp;&bull;
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+        <line x1="3" y1="6" x2="3" y2="19" />
+        <line x1="12" y1="6" x2="12" y2="19" />
+        <line x1="21" y1="6" x2="21" y2="19" />
+      </svg>
+      {{ .WordCount }}&nbsp;{{ i18n "words" }}
+      {{ if .IsTranslated -}}
+        {{- $sortedTranslations := sort .Translations "Site.Language.Weight" -}}
+        {{- $links := apply $sortedTranslations "partial" "translation_link.html" "." -}}
+        {{- $cleanLinks := apply $links "chomp" "." -}}
+        {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator") -}}
+        &nbsp;&bull;&nbsp;{{ i18n "translationsLabel" }}{{ $linksOutput }}
+      {{- end }}
+    </h5>
 
     {{ .Content }}
   </article>
