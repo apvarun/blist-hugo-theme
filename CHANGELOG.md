@@ -2,6 +2,14 @@
 
 All the changes made to Showcase theme for Hugo.
 
+## v1.3.0 - 2021-10-27
+
+### Added
+
+- Add YouTube & Instagram social icons - #9
+- Add i18n support - #11
+- Add 404 page - #13
+
 ## v1.2.0 - 2021-07-18
 
 ### Added

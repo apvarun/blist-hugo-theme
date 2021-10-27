@@ -133,6 +133,8 @@ If you have a question, please [open an issue](https://github.com/apvarun/blist-
 
 Contributions, issues, and feature requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
+<table><tr><td align="center"><a href="https://github.com/apvarun"><img alt="apvarun" src="https://avatars.githubusercontent.com/u/8411309?v=4" width="117" /><br />apvarun</a></td><td align="center"><a href="https://github.com/engel-b"><img alt="engel-b" src="https://avatars.githubusercontent.com/u/5812810?v=4" width="117" /><br />engel-b</a></td><td align="center"><a href="https://github.com/lucab85"><img alt="lucab85" src="https://avatars.githubusercontent.com/u/24267107?v=4" width="117" /><br />lucab85</a></td></tr></table>
+
 ## License
 
 Licensed under [MIT](LICENSE)
