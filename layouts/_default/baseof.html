@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
   {{- partial "head.html" . -}}
-  <body class="dark:bg-gray-800 dark:text-white relative">
+  <body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen">
     {{- partial "header.html" . -}}
-    <main>
+    <main class="flex-1">
     {{- block "main" . }}{{- end }}
     </main>
     {{- partial "footer.html" . -}}
