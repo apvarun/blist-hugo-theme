@@ -1,0 +1,95 @@
+# Content
+- id: postedOnDate
+  translation: "Publié le {{ . }}"
+- id: lastModified
+  translation: "(Dernière modification le {{ . }})"
+- id: translationsLabel
+  translation: "Autres langues: "
+- id: translationsSeparator
+  translation: ", "
+- id: readMore
+  translation: "Lire plus"
+- id: olderPosts
+  translation: "Publications plus anciennes"
+- id: newerPosts
+  translation: "Publications plus récentes"
+- id: previousPost
+  translation: "Publication précédente"
+- id: nextPost
+  translation: "Publication suivante"
+- id: readTime
+  translation: "minutes"
+- id: words
+  translation: "mots"
+
+# Date
+- id: January
+  translation: "janvier"
+- id: February
+  translation: "février"
+- id: March
+  translation: "mars"
+- id: April
+  translation: "avril"
+- id: May
+  translation: "mai"
+- id: June
+  translation: "juin"
+- id: July
+  translation: "juillet"
+- id: August
+  translation: "août"
+- id: September
+  translation: "septembre"
+- id: October
+  translation: "octobre"
+- id: November
+  translation: "novembre"
+- id: December
+  translation: "décembre"
+
+# 404 page
+- id: pageNotFound
+  translation: "Oups, cette page n'existe pas. Circulez. (erreur 404)"
+
+# Footer
+- id: poweredBy # Accepts HTML
+  translation: 'Motorisé par <a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> &nbsp;&bull;&nbsp; Theme <a href="https://github.com/apvarun/blist-hugo-theme">Blist</a>'
+
+# Navigation
+- id: toggleNavigation
+  translation: "Permuter la navigation"
+- id: languageSwitcherLabel
+  translation: "Langue"
+- id: gcseLabelShort
+  translation: "Recherche"
+- id: gcseLabelLong
+  translation: "Rechercher dans {{ .Site.Title }}"
+- id: gcseClose
+  translation: "Fermer"
+
+# Staticman
+- id: noComment
+  translation: "Pas de commentaire"
+- id: oneComment
+  translation: "commentaire"
+- id: moreComment
+  translation: "commentaires"
+- id: useMarkdown
+  translation: "Vous pouvez utiliser la syntaxe Markdown"
+- id: yourName
+  translation: "Votre nom"
+- id: yourEmail
+  translation: "Votre adresse email"
+- id: yourWebsite
+  translation: "Votre site web"
+
+# Delayed Disqus
+- id: show
+  translation: "Montrer"
+- id: comments
+  translation: "commentaires" 
+
+# Related posts
+- id: seeAlso
+  translation: "Voir aussi"
