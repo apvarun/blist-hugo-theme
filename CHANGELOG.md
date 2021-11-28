@@ -2,6 +2,14 @@
 
 All the changes made to Showcase theme for Hugo.
 
+## v1.3.1 - 2021-11-28
+
+### Added
+
+- Adding xing support to social icons - #15
+- Fix: Adding missing whitespace between label and language in single page - #16
+- Fix: Readable Lastmod - #17
+
 ## v1.3.0 - 2021-10-27
 
 ### Added
