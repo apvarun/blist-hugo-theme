@@ -25,7 +25,7 @@
       </svg>
       {{ $datestr | i18n "postedOnDate" }}
       {{ if ne $datestr $lastmodstr }}
-        &nbsp{{ $lastmodstr | i18n "lastModified" }}<br/>
+        &nbsp{{ $lastmodstr | i18n "lastModified" }}</h5><h5 class="text-sm flex items-center">
       {{ else }}
         &nbsp;&bull;&nbsp;
       {{ end }}
