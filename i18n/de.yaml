@@ -9,6 +9,8 @@
   translation: ", "
 - id: readMore
   translation: "Mehr"
+- id: morePosts
+  translation: "Mehr Posts"
 - id: olderPosts
   translation: "Ältere Posts"
 - id: newerPosts
