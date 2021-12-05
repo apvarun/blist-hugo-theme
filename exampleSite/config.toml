@@ -3,6 +3,9 @@ metaDataFormat = "yaml"
 title = "Blist Multilingual Theme"
 theme = "blist"
 
+# Google analytics
+googleAnalytics = ""
+
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
 [languages]
