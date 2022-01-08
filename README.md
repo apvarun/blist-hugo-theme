@@ -94,6 +94,10 @@ From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and
 
 Menu in Blist theme is pre-set to have all section names. You can include custom links in header using the `menu.main` option config.toml.
 
+### Logo
+
+`logo` param in the site config will allow to use an image as the logo instead of the website name. It is localizable and so can have different logo for different languages
+
 ### Darkmode
 
 `[params.darkModeToggle]` enables the dark mode toggle in header. The preference is then saved so that the mode is automatically chosen for return visits.
