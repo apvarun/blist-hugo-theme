@@ -1,6 +1,10 @@
 <header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
   <a href="{{ .Site.Home.Permalink }}" class="capitalize font-extrabold text-2xl">
+    {{ if .Site.Params.logo }}
+    <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="h-8 max-w-full" />
+    {{ else }}
     {{ .Site.Title }}
+    {{ end }}
   </a>
   <button class="mobile-menu-button md:hidden">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
