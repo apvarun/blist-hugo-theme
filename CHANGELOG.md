@@ -2,6 +2,13 @@
 
 All the changes made to Showcase theme for Hugo.
 
+## v1.4.0 - 2022-01-08
+
+### Added
+
+- Hamburger menu for mobile UI #23
+- Image logo support #24
+
 ## v1.3.1 - 2021-11-28
 
 ### Added
