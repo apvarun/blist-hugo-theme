@@ -11,6 +11,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     let els = JSON.parse(content).htmlElements;
     return els.tags.concat(els.classes, els.ids);
   },
+  safelist: ["dark"],
 });
 
 module.exports = {
@@ -22,5 +23,6 @@ module.exports = {
     require("autoprefixer")({
       path: [themeDir],
     }),
+    purgecss
   ],
 };
