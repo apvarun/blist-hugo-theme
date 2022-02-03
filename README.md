@@ -66,11 +66,14 @@ Then visit `http://localhost:1313/` in your browser to view the example site.
 
 Make sure to commit the above changes to your repository.
 
+## Publish your website
+
 When deploying to services like Netlify or Vercel, use the following command for building your site:
 
 ```sh
-npm i && hugo -D --gc
+npm i && HUGO_ENVIRONMENT=production hugo --gc
 ```
+The parameter `HUGO_ENVIRONMENT=production` enables the execution of css puring.
 
 ## Add content
 
