@@ -55,8 +55,14 @@
     darkmode.addEventListener('click', toggleDarkMode);
   }
 
-  const isDark = localStorage.getItem('darkmode');
-  if (isDark && isDark === 'dark') {
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
     toggleDarkMode();
   }
 </script>
