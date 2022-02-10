@@ -82,6 +82,9 @@ DefaultContentLanguageInSubdir = true
   # Reference: https://tailwindcss.com/docs/customizing-colors
   ascentColor = "bg-blue-100"
 
+  # The page bundle that is shown on the front page
+  frontBundle = "blog"
+
 [params.homepage.social]
   # Global params xommon for both languages
   title = "Follow me"

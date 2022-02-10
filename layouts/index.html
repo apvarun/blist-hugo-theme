@@ -1,12 +1,13 @@
 {{ define "main" }}
   {{- partial "intro.html" . -}}
+  {{ $frontBundle := .Site.Params.frontBundle | default "blog" }}
   <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-    {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" "blog")  }}
+    {{ range first 6 (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)  }}
       {{- partial "blog-card.html" . -}}
     {{ end }}
   </div>
 
-  {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" "blog")) 6 }}
+  {{ if gt (len (where .Site.RegularPages.ByDate.Reverse "Type" $frontBundle)) 6 }}
   <div class="text-center mb-8">
     <a class="px-8 py-3 rounded transition-colors {{ .Site.Params.ascentColor | default "bg-pink-50" }}
       text-gray-500 hover:text-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:text-white"
