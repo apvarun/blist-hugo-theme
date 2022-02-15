@@ -73,7 +73,7 @@ When deploying to services like Netlify or Vercel, use the following command for
 ```sh
 npm i && HUGO_ENVIRONMENT=production hugo --gc
 ```
-The parameter `HUGO_ENVIRONMENT=production` enables the execution of css puring.
+The parameter `HUGO_ENVIRONMENT=production` enables the execution of css purging.
 
 ## Add content
 
