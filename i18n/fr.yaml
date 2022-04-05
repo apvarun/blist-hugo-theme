@@ -1,0 +1,97 @@
+# Content
+- id: postedOnDate
+  translation: "Posté le {{ . }}"
+- id: lastModified
+  translation: "(Dernière modification le {{ . }})"
+- id: translationsLabel
+  translation: "Autres langues: "
+- id: translationsSeparator
+  translation: ", "
+- id: readMore
+  translation: "Lire plus"
+- id: morePosts
+  translation: "Plus d'articles"
+- id: olderPosts
+  translation: "Articles plus anciens"
+- id: newerPosts
+  translation: "Articles plus récents"
+- id: previousPost
+  translation: "Articles précédents"
+- id: nextPost
+  translation: "Articles suivants"
+- id: readTime
+  translation: "minutes"
+- id: words
+  translation: "mots"
+
+# Date
+- id: January
+  translation: "Janvier"
+- id: February
+  translation: "Février"
+- id: March
+  translation: "Mars"
+- id: April
+  translation: "Avril"
+- id: May
+  translation: "Mai"
+- id: June
+  translation: "Juin"
+- id: July
+  translation: "Juillet"
+- id: August
+  translation: "Août"
+- id: September
+  translation: "Septembre"
+- id: October
+  translation: "Octobre"
+- id: November
+  translation: "Novembre"
+- id: December
+  translation: "Décembre"
+
+# 404 page
+- id: pageNotFound
+  translation: "Whoops, cette page n'existe pas. Circulez. (404 error)"
+
+# Footer
+- id: poweredBy # Accepts HTML
+  translation: '<a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
+
+# Navigation
+- id: toggleNavigation
+  translation: "Déplier le menu"
+- id: languageSwitcherLabel
+  translation: "Langue"
+- id: gcseLabelShort
+  translation: "Rechercher"
+- id: gcseLabelLong
+  translation: "Rechercher {{ .Site.Title }}"
+- id: gcseClose
+  translation: "Fermer"
+
+# Staticman
+- id: noComment
+  translation: "Pas de commentaire"
+- id: oneComment
+  translation: "Commentaire"
+- id: moreComment
+  translation: "Plus de commentaire"
+- id: useMarkdown
+  translation: "Vous pouvez utiliser la syntaxe Markdown"
+- id: yourName
+  translation: "Votre nom"
+- id: yourEmail
+  translation: "Votre adresse e-mail"
+- id: yourWebsite
+  translation: "Votre site internet"
+
+# Delayed Disqus
+- id: show
+  translation: "Voir"
+- id: comments
+  translation: "commentaires" 
+
+# Related posts
+- id: seeAlso
+  translation: "Voir aussi"
