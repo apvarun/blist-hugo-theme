@@ -60,7 +60,31 @@ DefaultContentLanguageInSubdir = true
         name = "Tags"
         url = "tags"
         weight = 3
+        
+  [languages.fr]
+    contentDir = "content/fr" #French
+    weight = 1
+    languageName = "Français"
+    [languages.fr.params]
+      introTitle = "Salut! Je suis Katheryn Fox"
+      introSubtitle = "Développeuse junior de 26 ans qui adore les jeux de société, le blogging et la peinture"
+      introPhoto = "/picture.jpg"
+      logo = "/blist-logo.png"
+    [[languages.fr.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
 
+    [[languages.fr.menu.main]]
+        name = "À propos"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.fr.menu.main]]
+        name = "Tags"
+        url = "tags"
+        weight = 3
+        
   [languages.dy]
     contentDir = "content/dy" #Example language
     weight = 3
