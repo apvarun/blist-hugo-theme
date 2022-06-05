@@ -1,7 +1,7 @@
 <footer class="container p-6 mx-auto flex justify-between items-center">
   <span class="text-sm font-light">
     {{ if (isset .Site.Params "copyright") }}
-    {{ .Site.Params.copyright }}
+    {{ .Site.Params.copyright | safeHTML }}
     {{ else }}
     {{ dateFormat "2006" now }} © {{ .Site.Title }}
     {{ end }}
