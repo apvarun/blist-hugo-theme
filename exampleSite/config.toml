@@ -110,7 +110,12 @@ DefaultContentLanguageInSubdir = true
   frontBundle = "blog"
 
   # Used to hide the post metadata such as posted date, reading time and word count
+  # Can be used at site level or page level
   hideMeta = false
+
+  # To hide "Other languages" option if the post is available in multiple languages
+  # Can be used at site level or page level
+  hideOtherLanguages = false
 
 [params.homepage.social]
   # Global params common for both languages
