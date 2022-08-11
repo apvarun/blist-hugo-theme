@@ -110,7 +110,7 @@ DefaultContentLanguageInSubdir = true
   frontBundle = "blog"
 
 [params.homepage.social]
-  # Global params xommon for both languages
+  # Global params common for both languages
   title = "Follow me"
   description = "I work on everything coding and tweet developer memes"
   twitter = "https://twitter.com/"
