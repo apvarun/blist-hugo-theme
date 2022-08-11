@@ -109,6 +109,9 @@ DefaultContentLanguageInSubdir = true
   # The page bundle that is shown on the front page
   frontBundle = "blog"
 
+  # Used to hide the post metadata such as posted date, reading time and word count
+  hideMeta = false
+
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
