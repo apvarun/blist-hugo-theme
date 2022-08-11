@@ -110,7 +110,8 @@ function fetchJSONFile(path, callback) {
 // on first call of search box (CMD-/)
 //
 function loadSearch() {
-  fetchJSONFile('/index.json', function (data) {
+  const lang = document.querySelector('head > meta[name="lang"]')?.getAttribute?.('content')
+  fetchJSONFile(`${lang ? "/" + lang : ""}/index.json`, function (data) {
 
     var options = { // fuse.js options; check fuse.js website for details
       shouldSort: true,
@@ -154,7 +155,7 @@ function executeSearch(term) {
 
     for (let item in results.slice(0, 5)) { // only show first 5 results
       const title = '<div class="text-2xl mb-2 font-bold">' + results[item].item.title + '</div>';
-      const date = results[item].item.date ? '<div><em class="">' + new Date(results[item].item.date).toUTCString().substring(0,16) + '</em></div>' : '';
+      const date = results[item].item.date ? '<div><em class="">' + new Date(results[item].item.date).toUTCString().substring(0, 16) + '</em></div>' : '';
       const contents = '<div>' + results[item].item.contents + '</div>';
 
       searchitems = searchitems + '<li><a class="block mb-2 px-4 py-2 rounded pb-2 border-b border-gray-200 dark:border-gray-600 focus:bg-gray-100 dark:focus:bg-gray-700 focus:outline-none" href="' + results[item].item.permalink + '" tabindex="0">' + title + date + contents + '</a></li>';
