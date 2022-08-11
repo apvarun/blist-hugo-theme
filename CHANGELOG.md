@@ -2,6 +2,18 @@
 
 All the changes made to Showcase theme for Hugo.
 
+## v1.5.0 - 2022-08-11
+
+### Added
+
+- Ability to hide metadata via param hideMeta #37
+- Hide other languages option via param hideOtherLanguages
+- Add French support #53 #54 #55
+
+### Fixed
+
+- Fix broken Multilingual search
+
 ## v1.4.0 - 2022-01-08
 
 ### Added

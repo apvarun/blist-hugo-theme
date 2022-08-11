@@ -1,6 +1,6 @@
 {
   "name": "blist",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Blist is a clean and fast blog theme for your Hugo site.",
   "main": "index.js",
   "repository": "https://github.com/apvarun/blist-hugo-theme",
@@ -9,6 +9,7 @@
   "scripts": {
     "start": "hugo server --disableFastRender",
     "start-examplesite": "hugo server -s exampleSite --themesDir=../.. --disableFastRender",
+    "build-examplesite": "NODE_ENV=production hugo -s exampleSite --themesDir=../.. --gc",
     "build": "NODE_ENV=production hugo --gc"
   },
   "devDependencies": {
