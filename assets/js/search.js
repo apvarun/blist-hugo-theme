@@ -31,6 +31,9 @@ function openSearch() {
     loadSearch(); // loads our json data and builds fuse.js search index
     firstRun = false; // let's never do this again
   }
+  
+  //Close the mobile menu when search is click.
+  mobileMenu.classList.toggle('hidden');
 
   // Toggle visibility of search box
   if (!searchVisible) {
