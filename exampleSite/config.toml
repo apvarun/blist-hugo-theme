@@ -128,6 +128,7 @@ DefaultContentLanguageInSubdir = true
   medium = "https://medium.com/"
   reddit = "https://reddit.com/"
   dribbble = "https://dribbble.com/"
+  stackoverflow = "https://stackoverflow.com/"
 
 [[menu.main]]
   name = "About"
