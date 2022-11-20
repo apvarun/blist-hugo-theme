@@ -124,6 +124,7 @@ DefaultContentLanguageInSubdir = true
   twitter = "https://twitter.com/"
   linkedin = "https://linkedin.com/in/"
   xing = "https://www.xing.com/profile/"
+  telegram = "https://t.me/"
   github = "https://github.com/"
   buymeacoffee = "https://www.buymeacoffee.com/"
   medium = "https://medium.com/"
