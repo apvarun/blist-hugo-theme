@@ -320,6 +320,32 @@
         </a>
       </li>
       {{ end }}
+      {{ with .Site.Params.homepage.social.xda }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="xda"
+          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+           <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-xda"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M13.84 3.052V0h7.843v17.583H13.84v-3.024h4.591V3.052zM5.569 14.53V3.024h4.592V0H2.318v17.583H6.98L10.16 24v-9.483z"/>
+          </svg>
+        </a>
+      </li>
+      {{ end }}
       {{ with .Site.Params.homepage.social.tiktok }}
       <li>
         <a
