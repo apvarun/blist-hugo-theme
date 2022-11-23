@@ -130,6 +130,7 @@ DefaultContentLanguageInSubdir = true
   dribbble = "https://dribbble.com/"
   stackoverflow = "https://stackoverflow.com/"
   tiktok = "https://tiktok.com"
+  googlescholar = "https://scholar.google.com/"
 
 [[menu.main]]
   name = "About"
