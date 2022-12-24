@@ -124,13 +124,17 @@ DefaultContentLanguageInSubdir = true
   twitter = "https://twitter.com/"
   linkedin = "https://linkedin.com/in/"
   xing = "https://www.xing.com/profile/"
+  telegram = "https://t.me/"
   github = "https://github.com/"
+  buymeacoffee = "https://www.buymeacoffee.com/"
   medium = "https://medium.com/"
   reddit = "https://reddit.com/"
   dribbble = "https://dribbble.com/"
   stackoverflow = "https://stackoverflow.com/"
+  xda = "https://forum.xda-developers.com/"
   tiktok = "https://tiktok.com"
   googlescholar = "https://scholar.google.com/"
+  mastodon = "https://joinmastodon.org"
 
 [[menu.main]]
   name = "About"
