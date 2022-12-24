@@ -133,6 +133,7 @@ DefaultContentLanguageInSubdir = true
   stackoverflow = "https://stackoverflow.com/"
   xda = "https://forum.xda-developers.com/"
   tiktok = "https://tiktok.com"
+  googlescholar = "https://scholar.google.com/"
   mastodon = "https://joinmastodon.org"
 
 [[menu.main]]
