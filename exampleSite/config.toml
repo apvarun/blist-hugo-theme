@@ -117,6 +117,10 @@ DefaultContentLanguageInSubdir = true
   # Can be used at site level or page level
   hideOtherLanguages = false
 
+  # Add support for Table of contents
+  # Can be added to a page level also in markdown frontmatter
+  toc = true
+
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"

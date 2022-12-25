@@ -8,3 +8,44 @@
 @import "assets/css/paginator";
 /* Tailwind's utility classes - generated based on config file */
 @import "node_modules/tailwindcss/utilities";
+
+@layer components {
+  details.toc[open] summary ~ * {
+    animation: slideUp 0.25s ease-in-out;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  details.toc[open] summary svg {
+    @apply transform duration-200 rotate-180 ease-in-out;
+  }
+
+  details.toc > ul {
+    @apply ml-4;
+  }
+
+  details.toc ul {
+    @apply list-none;
+    margin-top: 0.125rem /* 2px */ !important;
+    margin-bottom: 0.125rem /* 2px */ !important;
+  }
+  details.toc ul li {
+    margin-top: 0.125rem /* 2px */ !important;
+    margin-bottom: 0.125rem /* 2px */ !important;
+  }
+  details.toc ul li:before {
+    @apply rounded-none bg-gray-400;
+  }
+  details.toc ul li a {
+    @apply no-underline text-gray-700 dark:text-gray-200 text-base;
+  }
+}

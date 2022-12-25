@@ -60,6 +60,10 @@
     </h5>
     {{ end }}
 
+    {{ if (or .Site.Params.toc .Params.toc) }}
+    {{- partial "toc.html" . -}}
+    {{ end }}
+
     {{ .Content }}
   </article>
 
