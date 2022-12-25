@@ -2,6 +2,29 @@
 
 All the changes made to Showcase theme for Hugo.
 
+## v2.0.0 - 2022-12-25
+
+### Added
+
+- BREAKING: Ability to specify social icons order #91
+- Table of contents support #84
+- Search customization #79
+- Option to skip showing thumbnail in post page #93
+- Added more social icons
+  - Mastodon #92
+  - XDA #83
+  - Telegram #83
+  - Buy me a coffee #83
+  - Google Scholar #85
+  - Facebook #90
+  - Behance #66
+  - Tiktok #77
+  - Stackoverflow #71
+
+### Fixed
+
+- Inline code block #78
+
 ## v1.5.0 - 2022-08-11
 
 ### Added
