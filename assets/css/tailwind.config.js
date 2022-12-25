@@ -19,6 +19,18 @@ module.exports = {
   theme: {
     extend: {
       typography: (theme) => ({
+        DEFAULT: {
+          css: [
+            {
+              'code::before': {
+                content: '""',
+              },
+              'code::after': {
+                content: '""',
+              },
+            }
+          ]
+        },
         dark: {
           css: [
             {
@@ -65,6 +77,12 @@ module.exports = {
               },
               "a code": {
                 color: theme("colors.white"),
+              },
+              'code::before': {
+                content: '""',
+              },
+              'code::after': {
+                content: '""',
               },
               pre: {
                 color: theme("colors.gray.200"),
