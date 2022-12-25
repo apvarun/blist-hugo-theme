@@ -2,7 +2,7 @@
   {{ $lastmodstr := (partial "date.html" (dict "date" .Lastmod "language" $.Page.Language "format" "long")) }}
   {{ $datestr := (partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "long")) }}
 
-  {{ if .Params.thumbnail }}
+  {{ if (and .Params.thumbnail (not (or .Site.Params.hidePageThumbnail .Params.hidePageThumbnail)) ) }}
   <div class="relative max-w-5xl mx-auto px-4">
     <img src="{{ .Params.thumbnail }}" class="rounded-lg shadow-sm w-full object-contain" />
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}

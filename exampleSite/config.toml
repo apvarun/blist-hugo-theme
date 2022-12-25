@@ -121,6 +121,11 @@ DefaultContentLanguageInSubdir = true
   # Can be added to a page level also in markdown frontmatter
   toc = true
 
+  # Hides the thumbnail in post view
+  # Thumbnails in home and blog pages will still be shown
+  # This setting can also be in page's markdown file
+  hidePageThumbnail = false
+
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
