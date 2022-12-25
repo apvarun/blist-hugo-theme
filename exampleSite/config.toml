@@ -182,6 +182,9 @@ DefaultContentLanguageInSubdir = true
   [[params.homepage.social.icons]]
     website = "facebook"
     url = "https://facebook.com"
+  [[params.homepage.social.icons]]
+    website = "behance"
+    url = "https://behance.net"
 
 [[menu.main]]
   name = "About"

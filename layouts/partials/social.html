@@ -394,7 +394,7 @@
           href="{{ .url }}"
           target="_blank"
           rel="noopener"
-          aria-label="xda"
+          aria-label="XDA"
           class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
            <svg
@@ -421,7 +421,7 @@
           href="{{ .url }}"
           target="_blank"
           rel="noopener"
-          aria-label="tiktok"
+          aria-label="Tiktok"
           class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -444,7 +444,7 @@
           href="{{ .url }}"
           target="_blank"
           rel="noopener"
-          aria-label="googlescholar"
+          aria-label="Google Scholar"
           class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -467,13 +467,33 @@
           href="{{ .url }}"
           target="_blank"
           rel="noopener"
-          aria-label="googlescholar"
+          aria-label="Facebook"
           class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-         </svg>
+          </svg>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ if eq .website "behance" }}
+      <li>
+        <a
+          href="{{ .url }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Behance"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-behance" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5"></path>
+            <line x1="3" y1="12" x2="7.5" y2="12"></line>
+            <path d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1"></path>
+            <line x1="16" y1="6" x2="19" y2="6"></line>
+        </svg>
         </a>
       </li>
       {{ end }}
