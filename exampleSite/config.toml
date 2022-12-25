@@ -97,6 +97,20 @@ DefaultContentLanguageInSubdir = true
   # Enable search in header
   enableSearch = true
 
+  # Option to customize the search parameters of a page
+  # Below are the supported options; Note that including entire content
+  # may slowdown the loading of search results
+  # Title of page is included by default
+  searchKeys = [
+    "tags",
+    "date",
+    "categories",
+    "summary",
+    "content",
+    "link",
+    "author"
+  ]
+
   # Custom copyright - optional
   copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
   favicon = "/favicon.svg"

@@ -1,5 +1,36 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
+{{- if .Site.Params.searchKeys -}}
+{{ $page := . }}
+    {{ $dict := dict "title" $page.Title }}
+    {{- range .Site.Params.searchKeys -}}
+    {{- if (eq . "tags") -}}
+        {{ $dict = merge $dict (dict "tags" $page.Params.tags) }}
+    {{- end -}}
+    {{- if (eq . "date") -}}
+        {{ $dict = merge $dict (dict "date" $page.Params.Lastmod) }}
+    {{- end -}}
+    {{- if (eq . "categories") -}}
+        {{ $dict = merge $dict (dict "categories" $page.Params.categories) }}
+    {{- end -}}
+    {{- if (eq . "author") -}}
+        {{ $dict = merge $dict (dict "author" $page.Params.author) }}
+    {{- end -}}
+    {{- if (eq . "summary") -}}
+        {{ $dict = merge $dict (dict "contents" $page.Summary) }}
+    {{- end -}}
+    {{- if (eq . "contents") -}}
+        {{ $dict = merge $dict (dict "contents" $page.Content) }}
+    {{- end -}}
+    {{- if (eq . "link") -}}
+        {{ $dict = merge $dict (dict "permalink" $page.Permalink) }}
+    {{- end -}}
+
+    {{- end -}}
+    {{- $.Scratch.Add "index" $dict -}}
+{{- else -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "date" .Params.Lastmod "categories" .Params.categories "contents" .Summary "permalink" .Permalink) -}}
+{{- end -}}
+
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
