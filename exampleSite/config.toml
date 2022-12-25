@@ -170,6 +170,9 @@ DefaultContentLanguageInSubdir = true
   [[params.homepage.social.icons]]
     website = "instagram"
     url = "https://instagram.com"
+  [[params.homepage.social.icons]]
+    website = "facebook"
+    url = "https://facebook.com"
 
 [[menu.main]]
   name = "About"
