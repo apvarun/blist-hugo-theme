@@ -4,15 +4,18 @@
       <div class="text-2xl font-bold mb-2">{{ .Site.Params.homepage.social.title }}</div>
       <p class="opacity-60">{{ .Site.Params.homepage.social.description }}</p>
     </div>
-    <ul class="flex justify-center gap-4">
-      {{ with .Site.Params.homepage.social.twitter }}
+
+    <ul class="flex justify-center gap-x-4 flex-wrap gap-y-2">
+      {{range .Site.Params.homepage.social.icons}}
+
+      {{ if eq .website "twitter" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Twitter"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,14 +36,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.mastodon }}
+
+      {{ if eq .website "mastodon" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Mastodon"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -60,14 +64,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.linkedin }}
+
+      {{ if eq .website "linkedin" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="LinkedIn"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -90,25 +95,26 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.xing }}
+
+      {{ if eq .website "xing" }}
       <li>
         <a
-                href="{{.}}"
-                target="_blank"
-                rel="noopener"
-                aria-label="xing"
-                class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          href="{{ .url }}"
+          target="_blank"
+          rel="noopener"
+          aria-label="xing"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M14.48736,22.8L9.65664,14.33208L17.154,1.2H22.2L14.70288,14.33208L19.53384,22.8H14.48736z M6.55728,16.26888l3.74808-6.17064l-2.81088-4.9512 H2.73696l2.81112,4.9512L1.8,16.26888H6.55728z"/>
@@ -116,14 +122,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.github }}
+
+      {{ if eq .website "github" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .github }}"
           target="_blank"
           rel="noopener"
           aria-label="GitHub"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -144,14 +151,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.telegram }}
+
+      {{ if eq .website "telegram" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Telegram"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
            <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -169,14 +177,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.buymeacoffee }}
+
+      {{ if eq .website "buymeacoffee" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Buy Me A Coffee"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -195,14 +204,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.medium }}
+
+      {{ if eq .website "medium" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Medium"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -226,14 +236,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.reddit }}
+
+      {{ if eq .website "reddit" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .reddit }}"
           target="_blank"
           rel="noopener"
           aria-label="Medium"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -259,14 +270,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.dribbble }}
+
+      {{ if eq .website "dribbble" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Dribbble"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -289,14 +301,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.youtube }}
+
+      {{ if eq .website "youtube" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="YouTube"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -317,14 +330,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.instagram }}
+
+      {{ if eq .website "instagram" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -346,14 +360,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.stackoverflow }}
+
+      {{ if eq .website "stackoverflow" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="stackoverflow"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-stackoverflow"
@@ -372,14 +387,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.xda }}
+
+      {{ if eq .website "xda" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="xda"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
            <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -398,14 +414,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.tiktok }}
+
+      {{ if eq .website "tiktok" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="tiktok"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-tiktok"
@@ -420,14 +437,15 @@
         </a>
       </li>
       {{ end }}
-      {{ with .Site.Params.homepage.social.googlescholar }}
+
+      {{ if eq .website "googlescholar" }}
       <li>
         <a
-          href="{{.}}"
+          href="{{ .url }}"
           target="_blank"
           rel="noopener"
           aria-label="googlescholar"
-          class="p-2 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
+          class="p-1 inline-block rounded-full border border-transparent text-gray-500 hover:text-gray-800 hover:border-gray-800 cursor-pointer transition-colors dark:text-gray-600 dark:hover:border-gray-300 dark:hover:text-gray-300"
         >
           <svg xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-googlescholar"
@@ -442,6 +460,8 @@
         </a>
       </li>
       {{ end }}
+
+      {{end}}
     </ul>
   </div>
 </div>
