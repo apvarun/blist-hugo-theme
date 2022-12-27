@@ -1,6 +1,12 @@
 # Changelog
 
-All the changes made to Showcase theme for Hugo.
+All the changes made to Blist theme for Hugo.
+
+## v2.0.1 - 2022-12-27
+
+### Fixed
+
+- Page metadata layout in mobile #94
 
 ## v2.0.0 - 2022-12-25
 

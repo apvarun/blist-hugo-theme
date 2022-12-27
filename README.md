@@ -48,7 +48,7 @@ git submodule add https://github.com/apvarun/blist-hugo-theme.git themes/blist
 
 Blist theme ships with an fully configured example site. For a quick preview:
 
-Copy the `package.json` file from `themes/showcase` folder to your hugo website root folder, and run `npm install`.
+Copy the `package.json` file from `themes/blist` folder to your hugo website root folder, and run `npm install`.
 
 ```sh
 cd themes/blist/exampleSite/
