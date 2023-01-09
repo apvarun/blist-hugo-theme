@@ -140,6 +140,29 @@ DefaultContentLanguageInSubdir = true
   # This setting can also be in page's markdown file
   hidePageThumbnail = false
 
+# Comments system
+[params.comments]
+  # Supports disqus, giscus and utterances
+  # Check hugo docs for setting up disqus
+  system = "giscus"
+
+  # Options for giscus, exclude hyphens
+  repo = ""
+  repoid = ""
+  category = ""
+  categoryid = ""
+  mapping = ""
+  strict = ""
+  reactionsenabled = ""
+  emitmetadata = ""
+  inputposition = ""
+  theme = ""
+
+  # Options for utterances, exclude hyphens
+  # repo = ""
+  # issueterm = ""
+  # theme = ""
+
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"

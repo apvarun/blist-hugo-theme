@@ -67,5 +67,7 @@
     {{ .Content }}
   </article>
 
+  {{- partial "comments.html" . -}}
+
   {{- partial "social.html" . -}}
 {{ end }}

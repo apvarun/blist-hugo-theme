@@ -2,6 +2,12 @@
 
 All the changes made to Blist theme for Hugo.
 
+## v2.1.0 - 2023-01-09
+
+### Added
+
+- Support multiple comment systems #64
+
 ## v2.0.1 - 2022-12-27
 
 ### Fixed
