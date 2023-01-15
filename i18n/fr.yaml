@@ -26,32 +26,6 @@
   one: "One mot"
   other: "{{.Count}} mots"
 
-# Date
-- id: January
-  translation: "Janvier"
-- id: February
-  translation: "Février"
-- id: March
-  translation: "Mars"
-- id: April
-  translation: "Avril"
-- id: May
-  translation: "Mai"
-- id: June
-  translation: "Juin"
-- id: July
-  translation: "Juillet"
-- id: August
-  translation: "Août"
-- id: September
-  translation: "Septembre"
-- id: October
-  translation: "Octobre"
-- id: November
-  translation: "Novembre"
-- id: December
-  translation: "Décembre"
-
 # 404 page
 - id: pageNotFound
   translation: "Whoops, cette page n'existe pas. Circulez. (404 error)"

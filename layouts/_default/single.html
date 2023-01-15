@@ -1,6 +1,6 @@
 {{ define "main" }}
-  {{ $lastmodstr := (partial "date.html" (dict "date" .Lastmod "language" $.Page.Language "format" "long")) }}
-  {{ $datestr := (partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "long")) }}
+  {{ $lastmodstr := (.Lastmod | time.Format ":date_long") }}
+  {{ $datestr := (.Date | time.Format ":date_long") }}
 
   {{ if (and .Params.thumbnail (not (or .Site.Params.hidePageThumbnail .Params.hidePageThumbnail)) ) }}
   <div class="relative max-w-5xl mx-auto px-4">
