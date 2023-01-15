@@ -20,9 +20,11 @@
 - id: nextPost
   translation: "Nächster Post"
 - id: readTime
-  translation: "Minuten"
+  one: "Eine Minute"
+  other: "{{.Count}} Minuten"
 - id: words
-  translation: "Wörter"
+  one: "Ein Wort"
+  other: "{{.Count}} Wörter"
 
 # Date
 - id: January

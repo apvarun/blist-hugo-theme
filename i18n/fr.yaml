@@ -20,9 +20,11 @@
 - id: nextPost
   translation: "Articles suivants"
 - id: readTime
-  translation: "minutes"
+  one: "Une minute"
+  other: "{{.Count}} minutes"
 - id: words
-  translation: "mots"
+  one: "One mot"
+  other: "{{.Count}} mots"
 
 # Date
 - id: January
@@ -53,6 +55,8 @@
 # 404 page
 - id: pageNotFound
   translation: "Whoops, cette page n'existe pas. Circulez. (404 error)"
+- id: goHome
+  translation: "Retourner à l'accueil"
 
 # Footer
 - id: poweredBy # Accepts HTML
@@ -69,6 +73,16 @@
   translation: "Rechercher {{ .Site.Title }}"
 - id: gcseClose
   translation: "Fermer"
+
+# Search
+- id: searchPlaceholder
+  translation: "Rechercher…"
+- id: searchResults
+  translation: "Résultats"
+- id: searchNoResults
+  translation: "Aucun résultat"
+- id: searchNoResultsDesc
+  translation: "Essayez avec d'autres mots-clés"
 
 # Staticman
 - id: noComment
