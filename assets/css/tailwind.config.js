@@ -15,7 +15,7 @@ module.exports = {
       "exampleSite/content/**/*.html",
     ],
   },
-  darkMode: "class",
+
   theme: {
     extend: {
       typography: (theme) => ({
@@ -95,10 +95,4 @@ module.exports = {
       }),
     },
   },
-  variants: {
-    extend: {
-      typography: ["dark"],
-    },
-  },
-  plugins: [require("@tailwindcss/typography")],
 };

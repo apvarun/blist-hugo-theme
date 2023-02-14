@@ -38,36 +38,6 @@
 </script>
 {{ end }}
 
-{{ if .Site.Params.darkModeToggle }}
-<script>
-  // On page load or when changing themes
-  const darkmode = document.querySelector('.toggle-dark-mode');
-  function toggleDarkMode() {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('darkmode', 'light')
-    } else {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('darkmode', 'dark')
-    }
-  }
-  if (darkmode) {
-    darkmode.addEventListener('click', toggleDarkMode);
-  }
-
-  const darkStorage = localStorage.getItem('darkmode');
-  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  if (!darkStorage && isBrowserDark) {
-    document.documentElement.classList.add('dark');
-  }
-
-  if (darkStorage && darkStorage === 'dark') {
-    toggleDarkMode();
-  }
-</script>
-{{ end }}
-
 <script>
   const mobileMenuButton = document.querySelector('.mobile-menu-button')
   const mobileMenu = document.querySelector('.mobile-menu')
