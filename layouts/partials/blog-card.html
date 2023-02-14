@@ -4,7 +4,7 @@
   <div class="relative">
     <img src="{{ .Params.thumbnail }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
-    <div class="absolute top-4 right-4 rounded shadow bg-white text-gray-900 dark:bg-gray-900 dark:text-white text-sm px-2 py-0.5">
+    <div class="absolute top-4 right-4 rounded shadow bg-gray-900 text-white text-sm px-2 py-0.5">
       {{ partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "short") }}
     </div>
     {{ end }}

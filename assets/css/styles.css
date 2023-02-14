@@ -46,7 +46,7 @@
     @apply rounded-none bg-gray-400;
   }
   details.toc ul li a {
-    @apply no-underline text-gray-700 dark:text-gray-200 text-base;
+    @apply no-underline text-gray-200 text-base;
   }
 
   a:empty {

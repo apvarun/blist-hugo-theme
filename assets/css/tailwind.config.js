@@ -28,12 +28,6 @@ module.exports = {
               'code::after': {
                 content: '""',
               },
-            }
-          ]
-        },
-        dark: {
-          css: [
-            {
               color: theme("colors.gray.400"),
               '[class~="lead"]': {
                 color: theme("colors.gray.300"),
