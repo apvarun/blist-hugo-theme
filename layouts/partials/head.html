@@ -20,6 +20,8 @@
   {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
   {{- if .Site.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  <link href='https://fonts.googleapis.com/css?family=Rubik:100,300,500,700,500i' rel='stylesheet'>
+
   {{ else }}
   {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
   <link
