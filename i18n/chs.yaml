@@ -1,0 +1,97 @@
+# Content
+- id: postedOnDate
+  translation: "发布于 {{ . }}"
+- id: lastModified
+  translation: "(最近编辑 {{ . }})"
+- id: translationsLabel
+  translation: "其他语言: "
+- id: translationsSeparator
+  translation: ", "
+- id: readMore
+  translation: "阅读更多"
+- id: morePosts
+  translation: "更多发布"
+- id: olderPosts
+  translation: "早前发布"
+- id: newerPosts
+  translation: "最新发布"
+- id: previousPost
+  translation: "上一篇"
+- id: nextPost
+  translation: "下一篇"
+- id: readTime
+  translation: "分钟"
+- id: words
+  translation: "字"
+
+# Date
+- id: January
+  translation: "1"
+- id: February
+  translation: "2"
+- id: March
+  translation: "3"
+- id: April
+  translation: "4"
+- id: May
+  translation: "5"
+- id: June
+  translation: "6"
+- id: July
+  translation: "7"
+- id: August
+  translation: "8"
+- id: September
+  translation: "9"
+- id: October
+  translation: "10"
+- id: November
+  translation: "11"
+- id: December
+  translation: "12"
+
+# 404 page
+- id: pageNotFound
+  translation: "等等！你似乎来到了异次元的边缘 (404 错误)"
+
+# Footer
+- id: poweredBy # Accepts HTML
+  translation: '<a href="https://gohugo.io">Hugo v{{ .Site.Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>'
+
+# Navigation
+- id: toggleNavigation
+  translation: "导航"
+- id: languageSwitcherLabel
+  translation: "语言"
+- id: gcseLabelShort
+  translation: "搜索"
+- id: gcseLabelLong
+  translation: "搜索 {{ .Site.Title }}"
+- id: gcseClose
+  translation: "关闭"
+
+# Staticman
+- id: noComment
+  translation: "无评论"
+- id: oneComment
+  translation: "评论"
+- id: moreComment
+  translation: "评论"
+- id: useMarkdown
+  translation: "可用 Markdown syntax"
+- id: yourName
+  translation: "你的名称"
+- id: yourEmail
+  translation: "邮箱地址"
+- id: yourWebsite
+  translation: "你的主页"
+
+# Delayed Disqus
+- id: show
+  translation: "显示"
+- id: comments
+  translation: "评论" 
+
+# Related posts
+- id: seeAlso
+  translation: "参考"
