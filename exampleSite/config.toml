@@ -5,6 +5,10 @@ theme = "blist"
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
+
+# make wordcount behave correctly for CJK languages.
+hasCJKLanguage = true
+
 [languages]
   [languages.en]
     contentDir = "content/en" #English
@@ -63,7 +67,7 @@ DefaultContentLanguageInSubdir = true
         
   [languages.fr]
     contentDir = "content/fr" #French
-    weight = 1
+    weight = 3
     languageName = "Français"
     [languages.fr.params]
       introTitle = "Salut! Je suis Katheryn Fox"
@@ -84,10 +88,58 @@ DefaultContentLanguageInSubdir = true
         name = "Tags"
         url = "tags"
         weight = 3
-        
+
+  [languages.chs]
+    contentDir = "content/chs" #中文简体
+    weight = 4
+    languageName = "中文简体"
+    [languages.chs.params]
+      introTitle = "嗨! 我是 Katheryn Fox"
+      introSubtitle = "26岁，初级开发者，喜欢玩社交卡牌游戏、写博客以及画画"
+      introPhoto = "/picture.jpg"
+      logo = "/blist-logo.png"
+    [[languages.chs.menu.main]]
+        name = "博客"
+        url = "blog"
+        weight = 1
+
+    [[languages.chs.menu.main]]
+        name = "关于"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.chs.menu.main]]
+        name = "标签"
+        url = "tags"
+        weight = 3
+
+ [languages.cht]
+    contentDir = "content/cht" #中文繁體
+    weight = 5
+    languageName = "中文繁體"
+    [languages.cht.params]
+      introTitle = "嗨! 我是 Katheryn Fox"
+      introSubtitle = "26岁，初級開發者，喜歡玩社交卡牌游戲、寫博客以及畫畫"
+      introPhoto = "/picture.jpg"
+      logo = "/blist-logo.png"
+    [[languages.cht.menu.main]]
+        name = "部落格"
+        url = "blog"
+        weight = 1
+
+    [[languages.chs.menu.main]]
+        name = "關於"
+        url = "page/about/"
+        weight = 2
+
+    [[languages.chs.menu.main]]
+        name = "標簽"
+        url = "tags"
+        weight = 3
+
   [languages.dy]
     contentDir = "content/dy" #Example language
-    weight = 3
+    weight = 6
     languageName = "Test Language"
 
 [params]
@@ -222,6 +274,15 @@ DefaultContentLanguageInSubdir = true
   [[params.homepage.social.icons]]
     website = "behance"
     url = "https://behance.net"
+  [[params.homepage.social.icons]]
+    website = "NetEase Cloud Music"
+    url = "https://music.163.com"
+  [[params.homepage.social.icons]]
+    website = "Douban"
+    url = "https://www.douban.com"
+  [[params.homepage.social.icons]]
+    website = "Lofter"
+    url = "https://lofter.com/"
 
 [[menu.main]]
   name = "About"
