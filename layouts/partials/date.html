@@ -7,7 +7,7 @@
   // Date format for Chinese User
 {{ else if or (eq "chs" .language.Lang) (eq "cht" .language.Lang) }}
   {{ if eq "long" .format }}
-    {{ .date.Format "2006年"}}{{ i18n (.date.Format "January")}}月{{ .date.Format "2日" }}
+    {{ .date.Format "2006年"}}{{ i18n (.date.Format "January")}}{{ .date.Format "2日" }}
   {{ else }}
     {{ .date.Format "2006-1-2" }}
   {{ end }}
