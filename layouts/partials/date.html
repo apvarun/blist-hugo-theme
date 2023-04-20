@@ -9,7 +9,7 @@
   {{ if eq "long" .format }}
     {{ .date.Format "2006年"}}{{ i18n (.date.Format "January")}}月{{ .date.Format "2日" }}
   {{ else }}
-    {{ .date.Format "2006"}}-{{ substr (i18n (.date.Format "January")) 0 3 }}-{{ .date.Format "2" }}
+    {{ .date.Format "2006-1-2" }}
   {{ end }}
 {{ else }}
   {{ if eq "long" .format }}
