@@ -26,29 +26,29 @@
 
 # Date
 - id: January
-  translation: "1"
+  translation: "1月"
 - id: February
-  translation: "2"
+  translation: "2月"
 - id: March
-  translation: "3"
+  translation: "3月"
 - id: April
-  translation: "4"
+  translation: "4月"
 - id: May
-  translation: "5"
+  translation: "5月"
 - id: June
-  translation: "6"
+  translation: "6月"
 - id: July
-  translation: "7"
+  translation: "7月"
 - id: August
-  translation: "8"
+  translation: "8月"
 - id: September
-  translation: "9"
+  translation: "9月"
 - id: October
-  translation: "10"
+  translation: "10月"
 - id: November
-  translation: "11"
+  translation: "11月"
 - id: December
-  translation: "12"
+  translation: "12月"
 
 # 404 page
 - id: pageNotFound
