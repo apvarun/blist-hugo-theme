@@ -53,3 +53,7 @@ body {
     /* Safari, Android, iOS */ url("/fonts/inter-v3-latin-700.svg#Inter")
       format("svg"); /* Legacy iOS */
 }
+
+pre {
+  direction: ltr !important;
+}
