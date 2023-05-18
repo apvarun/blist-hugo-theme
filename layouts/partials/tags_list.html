@@ -1,0 +1,13 @@
+{{ if .Site.Params.listTags }}
+<h6>{{ printf "Tags" | i18n "Tags" }}</h6>
+
+  <div class="container p-6 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+    {{ range (.GetTerms "tags") }}
+      <div class="p-2">
+        <a href="{{ .Permalink }}">
+          <div class="my-2 text-xl font-semibold">{{ .LinkTitle }}</div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+{{end}}

@@ -140,6 +140,9 @@ DefaultContentLanguageInSubdir = true
   # This setting can also be in page's markdown file
   hidePageThumbnail = false
 
+  # if true list article tags in the bottom of the page
+  listTags = true
+
 # Comments system
 [params.comments]
   # Supports disqus, giscus and utterances

@@ -95,3 +95,7 @@
 # Related posts
 - id: seeAlso
   translation: "Siehe auch"
+
+# Tags
+- id: Tags
+  translation: "labels"
