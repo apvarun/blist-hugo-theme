@@ -1,0 +1,26 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rss version="2.0">
+  <channel>
+    <title>{{ .Title }}</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>{{ .Params.description }}</description>
+    <language>{{ .Language }}</language>
+    <image>
+      <title>{{ .Title }}</title>
+      <link>{{ .Site.BaseURL }}</link>
+      <url>{{ $.Site.BaseURL }}{{ .Site.Params.introPhoto }}</url>
+      <width>546</width>
+      <height>546</height>
+    </image>
+
+    {{ range .Site.RegularPages }}
+      <item>
+        <title>{{ .Title }}</title>
+        <pubDate>{{ .Date  }}</pubDate>
+        <link>{{ .Permalink }}</link>
+        <guid>{{ .Permalink }}</guid>
+        <description>{{ (printf "<![CDATA[%s %s]]>" (printf "<img src=\"%s%s\" alt=\"%s\"/>" .Site.BaseURL .Params.thumbnail .Title) .Content) | safeHTML }}</description>
+      </item>
+    {{ end }}
+  </channel>
+</rss>
