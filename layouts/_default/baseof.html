@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
+<html dir="{{ if (isset .Site.Params "direction") }}{{ .Site.Params.direction }}{{ else }}ltr{{ end }}" lang="{{ .Lang }}" itemscope itemtype="http://schema.org/WebPage">
   {{- partial "head.html" . -}}
   <body class="dark:bg-gray-800 dark:text-white relative flex flex-col min-h-screen">
     {{- partial "header.html" . -}}
