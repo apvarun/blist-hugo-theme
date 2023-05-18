@@ -15,6 +15,7 @@ DefaultContentLanguageInSubdir = true
       introSubtitle = "26 y/o junior developer who enjoys social card games, blogging and painting"
       introPhoto = "/picture.jpg"
       logo = "/blist-logo.png"
+      direction = "ltr"
     [[languages.en.menu.main]]
         name = "Blog"
         url = "blog"
@@ -46,6 +47,7 @@ DefaultContentLanguageInSubdir = true
       introSubtitle = "26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen, Bloggen und Malen hat"
       introPhoto = "/picture.jpg"
       logo = "/blist-logo-de.png"
+      direction = "ltr"
     [[languages.de.menu.main]]
         name = "Blog"
         url = "blog"
@@ -70,6 +72,7 @@ DefaultContentLanguageInSubdir = true
       introSubtitle = "Développeuse junior de 26 ans qui adore les jeux de société, le blogging et la peinture"
       introPhoto = "/picture.jpg"
       logo = "/blist-logo.png"
+      direction = "ltr"
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
