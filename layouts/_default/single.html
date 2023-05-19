@@ -17,7 +17,7 @@
 
     <h1 class="text-2xl font-bold mb-2">{{ .Title }}</h1>
     {{ if not (or (or .Site.Params.hideMeta .Params.hideMeta) false) }}
-    <h5 class="text-sm flex items-center flex-wrap">
+    <p class="text-sm flex items-center flex-wrap">
       <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <rect x="4" y="5" width="16" height="16" rx="2" />
@@ -57,7 +57,7 @@
           &nbsp;&bull;&nbsp;{{ i18n "translationsLabel" }}&nbsp;{{ $linksOutput }}
         {{- end }}
       {{ end }}
-    </h5>
+    </p>
     {{ end }}
 
     {{ if (or .Site.Params.toc .Params.toc) }}
