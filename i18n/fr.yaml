@@ -95,3 +95,7 @@
 # Related posts
 - id: seeAlso
   translation: "Voir aussi"
+
+# Tags
+- id: Tags
+  translation: "Mots clés"

@@ -70,3 +70,7 @@
 # Related posts
 - id: seeAlso
   translation: "See also"
+
+# Tags
+- id: Tags
+  translation: "Tags"

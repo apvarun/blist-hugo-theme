@@ -65,6 +65,8 @@
     {{ end }}
 
     {{ .Content }}
+
+    {{- partial "tags_list.html" . -}}
   </article>
 
   {{- partial "comments.html" . -}}
