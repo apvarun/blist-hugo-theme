@@ -1,7 +1,7 @@
-<header class="container flex justify-between md:justify-between gap-4 flex-wrap p-6 mx-auto relative">
+<header class="container flex justify-between md:justify-between gap-4 flex-wrap p-2 mx-auto relative">
   <a href="{{ .Site.Home.Permalink }}" class="capitalize font-extrabold text-2xl">
     {{ if .Site.Params.logo }}
-    <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="h-8 max-w-full" />
+    <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="h-20 max-w-full" />
     {{ else }}
     {{ .Site.Title }}
     {{ end }}
@@ -82,7 +82,7 @@
     </li>
     {{ end }}
 
-    {{ if .Site.Params.darkModeToggle }}
+    {{/*  {{ if .Site.Params.darkModeToggle }}
     <li class="grid place-items-center">
       <span class="toggle-dark-mode inline-block cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
@@ -100,6 +100,6 @@
         </svg>
       </span>
     </li>
-    {{ end }}
+    {{ end }}  */}}
   </ul>
 </header>
