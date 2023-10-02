@@ -1,4 +1,4 @@
-<header class="container flex justify-between md:justify-between gap-4 flex-wrap p-2 mx-auto relative">
+<header class="container flex justify-between md:justify-between gap-4 flex-wrap p-4 mx-auto relative">
   <a href="{{ .Site.Home.Permalink }}" class="capitalize font-extrabold text-2xl">
     {{ if .Site.Params.logo }}
     <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}" class="h-20 max-w-full" />
@@ -20,7 +20,7 @@
     {{ end }}
 
     {{ if .Site.IsMultiLingual }}
-    {{ if ge (len .Site.Languages) 3 }}
+    {{ if ge (len .Site.Languages) 1 }}
     <li class="relative cursor-pointer">
       <span class="language-switcher flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -43,9 +43,7 @@
       <div
         class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden">
         {{ range .Site.Languages }}
-        {{ if not (eq .Lang $.Site.Language.Lang) }}
         <a class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700" href="/{{ .Lang }}" lang="{{ .Lang }}">{{ default .Lang .LanguageName }}</a>
-        {{ end }}
         {{ end }}
       </div>
     </li>
@@ -102,4 +100,20 @@
     </li>
     {{ end }}  */}}
   </ul>
+{{ if ge (len .Site.Languages) 2 }}
+<script>
+const languageMenuButton = document.querySelector('.language-switcher');
+const languageDropdown = document.querySelector('.language-dropdown');
+languageMenuButton.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    if (languageDropdown.classList.contains('hidden')) {
+    languageDropdown.classList.remove('hidden')
+    languageDropdown.classList.add('flex')
+    } else {
+    languageDropdown.classList.add('hidden');
+    languageDropdown.classList.remove('flex');
+    }
+})
+</script>
+{{ end }}
 </header>

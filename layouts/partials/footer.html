@@ -21,23 +21,6 @@
 
 {{ template "_internal/google_analytics.html" . }}
 
-{{ if ge (len .Site.Languages) 3 }}
-<script>
-  const languageMenuButton = document.querySelector('.language-switcher');
-  const languageDropdown = document.querySelector('.language-dropdown');
-  languageMenuButton.addEventListener('click', (evt) => {
-    evt.preventDefault()
-    if (languageDropdown.classList.contains('hidden')) {
-      languageDropdown.classList.remove('hidden')
-      languageDropdown.classList.add('flex')
-    } else {
-      languageDropdown.classList.add('hidden');
-      languageDropdown.classList.remove('flex');
-    }
-  })
-</script>
-{{ end }}
-
 {{ if .Site.Params.darkModeToggle }}
 <script>
   // On page load or when changing themes
