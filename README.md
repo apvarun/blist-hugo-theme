@@ -63,7 +63,7 @@ Then visit `http://localhost:1313/` in your browser to view the example site.
 
 ## Configuring theme to a hugo website
 
-1. Copy `package.json` and `package-lock.json` to the root folder of your the website
+1. Copy `package.json` and `package-lock.json` to the root folder of your website
 2. Run `npm install` to install required packages for theme
 3. Run `npm i -g postcss-cli` to use PostCSS with Hugo build
 4. Set `theme = 'blist'` in config.toml
