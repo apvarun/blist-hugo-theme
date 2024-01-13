@@ -189,6 +189,10 @@ Contributions, issues, and feature requests are welcome! For major changes, plea
           src="https://avatars.githubusercontent.com/u/50796185?v=4" width="117" /><br />ernavdeepkr</a></td>
     <td align="center"><a href="https://github.com/roypeter"><img alt="roypeter"
           src="https://avatars.githubusercontent.com/u/16620459?v=4" width="117" /><br />roypeter</a></td>
+    <td align="center"><a href="https://github.com/janvanveldhuizen"><img alt="janvanveldhuizen"
+      src="https://avatars.githubusercontent.com/u/43573150?v=4" width="117" /><br />janvanveldhuizen</a></td>
+    <td align="center"><a href="https://github.com/jmflaherty"><img alt="jmflaherty"
+      src="https://avatars.githubusercontent.com/u/12985011?v=4" width="117" /><br />jmflaherty</a></td>
   </tr>
 </table>
 
