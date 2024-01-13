@@ -40,8 +40,8 @@ DefaultContentLanguageInSubdir = true
     weight = 2
     languageName = "Deutsch"
     title = "Blist (mehrsprachig)"
-    description = "Modernes Blog-Theme für Ihre Hugo-Site."
     [languages.de.params]
+      description = "Modernes Blog-Theme für Ihre Hugo-Site."
       introTitle = "Hallo, ich bin Katheryn Fox"
       introSubtitle = "26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen, Bloggen und Malen hat"
       introPhoto = "/picture.jpg"
