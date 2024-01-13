@@ -135,9 +135,9 @@ Make sure to enable JSON in outputs array.
   home = ["HTML", "RSS", "JSON"]
 ```
 
-### Latex
+### LaTeX
 
-Enable Mathematical options: set `math: true` in your markdown frontmatter
+Enable mathematical options: set `math: true` in your markdown frontmatter
 
 ### Google Analytics
 
