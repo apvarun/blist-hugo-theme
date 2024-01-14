@@ -6,7 +6,7 @@ homepage = "https://github.com/apvarun/blist"
 demosite = "https://blist.vercel.app"
 tags = ["Hugo", "theme", "blog", "modern", "responsive"]
 features = ["clean", "gallery", "minimal", "minimalist", "mobile", "personal", "responsive", "simple", "tailwind", "blog", "white"]
-min_version = "0.82.1"
+min_version = "0.110.0"
 
 [author]
   name = "Varun A P"
