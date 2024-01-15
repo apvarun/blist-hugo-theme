@@ -34,7 +34,7 @@ Blist is a clean and fast blog theme for your Hugo site.
 
 ## Get the theme
 
-Minimum Hugo Version: **0.82.1**
+Minimum Hugo Version: **0.110.0**
 
 Run from the root of your Hugo site:
 
