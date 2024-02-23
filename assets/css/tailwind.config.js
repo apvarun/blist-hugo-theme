@@ -1,20 +1,18 @@
 const themeDir = __dirname + "/../../";
 
 module.exports = {
-  purge: {
-    enabled: process.env.HUGO_ENVIRONMENT === "production",
-    content: [
-      themeDir + "layouts/**/*.html",
-      themeDir + "content/**/*.html",
-      "layouts/**/*.html",
-      "config.toml",
-      "content/**/*.html",
-      "assets/js/search.js",
-      "exampleSite/layouts/**/*.html",
-      "exampleSite/config.toml",
-      "exampleSite/content/**/*.html",
-    ],
-  },
+  content: [
+    themeDir + "layouts/**/*.html",
+    themeDir + "content/**/*.html",
+    "layouts/**/*.html",
+    "config.toml",
+    "hugo.toml",
+    "content/**/*.html",
+    "assets/js/search.js",
+    "exampleSite/layouts/**/*.html",
+    "exampleSite/config.toml",
+    "exampleSite/content/**/*.html",
+  ],
   darkMode: "class",
   theme: {
     extend: {
@@ -22,14 +20,14 @@ module.exports = {
         DEFAULT: {
           css: [
             {
-              'code::before': {
+              "code::before": {
                 content: '""',
               },
-              'code::after': {
+              "code::after": {
                 content: '""',
               },
-            }
-          ]
+            },
+          ],
         },
         dark: {
           css: [
@@ -78,10 +76,10 @@ module.exports = {
               "a code": {
                 color: theme("colors.white"),
               },
-              'code::before': {
+              "code::before": {
                 content: '""',
               },
-              'code::after': {
+              "code::after": {
                 content: '""',
               },
               pre: {
