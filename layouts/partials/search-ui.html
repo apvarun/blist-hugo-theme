@@ -14,16 +14,16 @@
     </div>
 
     <input type="search" class="py-2 px-3 w-full dark:text-black border dark:border-transparent"
-      placeholder="Enter search query" />
+      placeholder="{{ i18n "searchPlaceholder" }}" />
 
-    <div class="search-results text-lg font-medium my-4 hidden">Results</div>
+    <div class="search-results text-lg font-medium my-4 hidden">{{ i18n "searchResults" }}</div>
     <ul class="search-list my-2">
 
     </ul>
 
     <div class="no-results text-center my-8 hidden">
-      <div class="text-xl font-semibold mb-2">No results found</div>
-      <p class="font-light text-sm">Try adjusting your search query</p>
+      <div class="text-xl font-semibold mb-2">{{ i18n "searchNoResults" }}</div>
+      <p class="font-light text-sm">{{ i18n "searchNoResultsDesc" }}</p>
     </div>
   </div>
 </div>

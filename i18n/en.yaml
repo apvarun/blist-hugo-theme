@@ -20,14 +20,18 @@
 - id: nextPost
   translation: "Next Post"
 - id: readTime
-  translation: "minutes"
+  one: "One minute"
+  other: "{{.Count}} minutes"
 - id: words
-  translation: "words"
+  one: "One word"
+  other: "{{.Count}} words"
 
 
 # 404 page
 - id: pageNotFound
   translation: "Whoops, this page doesn't exist. Move along. (404 error)"
+- id: goHome
+  translation: "Go to home"
 
 # Footer
 - id: poweredBy # Accepts HTML
@@ -44,6 +48,16 @@
   translation: "Search {{ .Site.Title }}"
 - id: gcseClose
   translation: "Close"
+
+# Search
+- id: searchPlaceholder
+  translation: "Enter search query"
+- id: searchResults
+  translation: "Results"
+- id: searchNoResults
+  translation: "No results found"
+- id: searchNoResultsDesc
+  translation: "Try adjusting your search query"
 
 # Staticman
 - id: noComment
