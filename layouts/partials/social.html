@@ -2,7 +2,7 @@
   <div class="container px-4 py-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
     <div>
       <div class="text-2xl font-bold mb-2">{{ .Site.Params.homepage.social.title }}</div>
-      <p class="opacity-60">{{ .Site.Params.homepage.social.description }}</p>
+      <p class="opacity-60">{{ .Site.Params.homepage.social.description | safeHTML }}</p>
     </div>
 
     <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
