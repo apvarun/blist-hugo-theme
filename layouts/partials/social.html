@@ -3,6 +3,11 @@
     <div>
       <div class="text-2xl font-bold mb-2">{{ .Site.Params.homepage.social.title }}</div>
       <p class="opacity-60">{{ .Site.Params.homepage.social.description }}</p>
+      {{range .Site.Params.homepage.social.icons}}
+      {{ if eq .website "address" }}
+      <address class="opacity-60 text-sm pt-6">{{ .url | safeHTML }}</address>
+      {{ end }}
+      {{ end }}
     </div>
 
     <ul class="flex justify-center gap-x-3 flex-wrap gap-y-2">
