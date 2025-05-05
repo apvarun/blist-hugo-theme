@@ -19,7 +19,7 @@
     <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
     {{ end }}
 
-    {{ if hugo.IsMultiingual }}
+    {{ if hugo.IsMultilingual }}
     {{ if ge (len .Site.Languages) 3 }}
     <li class="relative cursor-pointer">
       <span class="language-switcher flex items-center gap-2">
