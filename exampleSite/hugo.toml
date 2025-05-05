@@ -172,8 +172,8 @@ DefaultContentLanguageInSubdir = true
     website = "address"
     url = "John Doe<br/>SomeStreet 20<br/>SomeState"
   [[params.homepage.social.icons]]
-    website = "twitter"
-    url = "https://twitter.com/"
+    website = "x"
+    url = "https://x.com/"
   [[params.homepage.social.icons]]
     website = "linkedin"
     url = "https://linkedin.com/in/"

@@ -66,7 +66,7 @@ Then visit `http://localhost:1313/` in your browser to view the example site.
 1. Copy `package.json` and `package-lock.json` to the root folder of your website
 2. Run `npm install` to install required packages for theme
 3. Run `npm i -g postcss-cli` to use PostCSS with Hugo build
-4. Set `theme = 'blist'` in config.toml
+4. Set `theme = 'blist'` in hugo.toml
 5. Run `npm start` to start your local server
 
 Make sure to commit the above changes to your repository.
@@ -96,11 +96,11 @@ The following explains how to add content to your Hugo site. You can find sample
 
 ## Configure your site
 
-From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and change the fields as you like. Helpful comments are provided.
+From `exampleSite/`, copy `hugo.toml` to the root folder of your Hugo site and change the fields as you like. Helpful comments are provided.
 
 ### Menu
 
-Menu in Blist theme is pre-set to have all section names. You can include custom links in header using the `menu.main` option config.toml.
+Menu in Blist theme is pre-set to have all section names. You can include custom links in header using the `menu.main` option hugo.toml.
 
 ### Logo
 
@@ -141,7 +141,7 @@ Enable mathematical options: set `math: true` in your markdown frontmatter
 
 ### Google Analytics
 
-Set `googleAnalytics` in `config.toml` to activate Hugo's [internal Google Analytics template](https://gohugo.io/templates/internal/#google-analytics).
+Set `services.googleAnalytics.ID` in `hugo.toml` to activate Hugo's [embedded Google Analytics template](https://gohugo.io/templates/embedded/#google-analytics).
 
 ## Performance
 
