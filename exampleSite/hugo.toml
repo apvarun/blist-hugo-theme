@@ -169,6 +169,9 @@ DefaultContentLanguageInSubdir = true
   description = "I work on everything coding and tweet developer memes"
 
   [[params.homepage.social.icons]]
+    website = "address"
+    url = "John Doe<br/>SomeStreet 20<br/>SomeState"
+  [[params.homepage.social.icons]]
     website = "twitter"
     url = "https://twitter.com/"
   [[params.homepage.social.icons]]
