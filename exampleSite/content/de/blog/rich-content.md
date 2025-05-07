@@ -19,9 +19,9 @@ Hugo wird mit mehreren [Built-in Shortcodes](https://gohugo.io/content-managemen
 
 ---
 
-## Tweet Shortcode
+## X Shortcode
 
-{{< tweet user="DesignReviewed" id="1085870671291310081" >}}
+{{< x user="DesignReviewed" id="1085870671291310081" >}}
 
 <br>
 
