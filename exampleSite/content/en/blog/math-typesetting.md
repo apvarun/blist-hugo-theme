@@ -1,54 +1,53 @@
 ---
 author: Hugo Authors
 title: Math Typesetting
-date: 2021-07-14
-description: A brief guide to setup KaTeX
-math: true
+date: 2025-05-07
+description: A brief guide to authoring math equations
 thumbnail: https://picsum.photos/id/1015/400/250
 ---
 
-Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
+The theme now supports server side rendering of math equations via hugo's built-in KaTeX rendering engine.
+No manual activation is needed, you can start using LaTeX math expressions in your Markdown content right away.
 
-<!--more-->
+### Prerequisites
 
-In this example we will be using [KaTeX](https://katex.org/)
+Please enable and configure the [passthrough extension](https://gohugo.io/configuration/markup/#passthrough) in the Hugo configuration file:
 
-- Create a partial under `/layouts/partials/math.html`
-- Within this partial reference the [Auto-render Extension](https://katex.org/docs/autorender.html) or host these scripts locally.
-- Include the partial in your templates like so:
-
-```bash
-{{ if or .Params.math .Site.Params.math }}
-{{ partial "math.html" . }}
-{{ end }}
+```yaml {filename="hugo.yaml"}
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
 ```
-
-- To enable KaTeX globally set the parameter `math` to `true` in a project's configuration
-- To enable KaTeX on a per page basis include the parameter `math: true` in content files
-
-**Note:** Use the online reference of [Supported TeX Functions](https://katex.org/docs/supported.html)
-
-{{< math.inline >}}
-{{ if or .Page.Params.math .Site.Params.math }}
-
-<!-- KaTeX -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-{{ end }}
-{{</ math.inline >}}
 
 ### Examples
 
-{{< math.inline >}}
+Both inline and separate paragraph LaTeX math expressions are supported in the Markdown content.
 
-<p>
+### Inline math
+
+```markdown {filename="page.md"}
 Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
-</p>
-{{</ math.inline >}}
+```
+will be rendered as:
 
-Block math:
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
 
-$$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$
+### Block math
+
+```markdown {filename="page.md"}
+$$\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }$$
+```
+
+will be rendered as:
+
+$$\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }$$
+
+
+### Supported functions
+
+**Note:** Use the online reference of [Supported TeX Functions](https://katex.org/docs/supported.html) and the [support table](https://katex.org/docs/support_table.html) for reference.
