@@ -29,27 +29,19 @@
   />
   {{ end -}}
 
-  <!-- KaTeX support -->
-  {{ if .Params.math }}
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
-      integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
-      crossorigin="anonymous"
-    >
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
-      integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
-      crossorigin="anonymous"
-    ></script>
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-      integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script>
+  {{ $noop := .WordCount }}
+  {{ if .Page.Store.Get "hasMath" }}
+    {{ $katex_css_url := printf "https://cdn.jsdelivr.net/npm/katex@latest/dist/katex%s.css" (cond hugo.IsProduction ".min" "") -}}
+    {{ with try (resources.GetRemote $katex_css_url) -}}
+      {{ with .Err -}}
+        {{ errorf "Could not retrieve KaTeX css file from CDN. Reason: %s." . -}}
+      {{ else with.Value -}}
+        {{ with resources.Copy (printf "css/katex%s.css" (cond hugo.IsProduction ".min" "")) . }}
+          {{ $secureCSS := . | resources.Fingerprint "sha512" -}}
+<link rel="stylesheet" href="{{- .RelPermalink -}}" integrity="{{- $secureCSS.Data.Integrity -}}" crossorigin="anonymous">
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
   {{ end }}
 
   {{ range .AlternativeOutputFormats -}}
