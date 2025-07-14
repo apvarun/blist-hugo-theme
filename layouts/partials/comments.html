@@ -1,7 +1,7 @@
 {{ if .Site.Params.comments.system }}
 <div class="px-2 mb-2">
   {{ if eq .Site.Params.comments.system "disqus" }}
-  {{ template "_internal/disqus.html" . }}
+  {{ partial "disqus.html" . }}
   {{ else if eq .Site.Params.comments.system "giscus" }}
   <script src="https://giscus.app/client.js"
     data-repo="{{ .Site.Params.comments.repo }}"

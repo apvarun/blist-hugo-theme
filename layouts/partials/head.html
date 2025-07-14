@@ -18,6 +18,7 @@
   {{ hugo.Generator }}
 
   {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}}
+
   {{- if hugo.IsServer }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
   {{ else }}
@@ -29,36 +30,28 @@
   />
   {{ end -}}
 
-  <!-- Katex support -->
-  {{ if .Params.math }}
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
-      integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv"
-      crossorigin="anonymous"
-    >
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
-      integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
-      crossorigin="anonymous"
-    ></script>
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
-      integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script>
+  {{ $noop := .WordCount }}
+  {{ if .Page.Store.Get "hasMath" }}
+    {{ $katex_css_url := printf "https://cdn.jsdelivr.net/npm/katex@latest/dist/katex%s.css" (cond hugo.IsProduction ".min" "") -}}
+    {{ with try (resources.GetRemote $katex_css_url) -}}
+      {{ with .Err -}}
+        {{ errorf "Could not retrieve KaTeX css file from CDN. Reason: %s." . -}}
+      {{ else with.Value -}}
+        {{ with resources.Copy (printf "css/katex%s.css" (cond hugo.IsProduction ".min" "")) . }}
+          {{ $secureCSS := . | resources.Fingerprint "sha512" -}}
+<link rel="stylesheet" href="{{- .RelPermalink -}}" integrity="{{- $secureCSS.Data.Integrity -}}" crossorigin="anonymous">
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
   {{ end }}
 
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{ template "_internal/schema.html" . }}
+  {{ partial "opengraph.html" . }}
+  {{ partial "twitter_cards.html" . }}
+  {{ partial "schema.html" . }}
 
   {{ if gt (len .Site.Languages) 1}}
   <meta name="lang" content="{{ .Site.Language }}" />
