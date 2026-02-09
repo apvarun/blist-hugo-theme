@@ -1,0 +1,6 @@
+{{ if and (or (eq "de" .language.Lang) (eq "fr" .language.Lang)) (eq "date_medium" .format) }}
+  {{ .date.Format "2" }}. {{ substr (i18n (.date.Format "January")) 0 3 }} {{ .date.Format "06"}}
+{{ else }}
+  {{ $layout := printf ":%s" .format }}
+  {{ .date | time.Format $layout }}
+{{ end }}

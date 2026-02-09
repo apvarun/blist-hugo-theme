@@ -23,7 +23,37 @@
   translation: "minuto(s)"
 - id: words
   translation: "palabra(s)"
+- id: toc
+  translation: "Tabla de contenido"
+- id: taggedPosts
+  one: "Un artículo"
+  other: "{{.Count}} artículos"
 
+# Date
+- id: January
+  translation: "Enero"
+- id: February
+  translation: "Febrero"
+- id: March
+  translation: "Marzo"
+- id: April
+  translation: "Abril"
+- id: May
+  translation: "Mayo"
+- id: June
+  translation: "Junio"
+- id: July
+  translation: "Julio"
+- id: August
+  translation: "Agosto"
+- id: September
+  translation: "Septiembre"
+- id: October
+  translation: "Octubre"
+- id: November
+  translation: "Noviembre"
+- id: December
+  translation: "Diciembre"
 
 # 404 page
 - id: pageNotFound

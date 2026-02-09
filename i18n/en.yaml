@@ -25,7 +25,11 @@
 - id: words
   one: "One word"
   other: "{{.Count}} words"
-
+- id: toc
+  translation: "Table of contents"
+- id: taggedPosts
+  one: "One post"
+  other: "{{.Count}} posts"
 
 # 404 page
 - id: pageNotFound
