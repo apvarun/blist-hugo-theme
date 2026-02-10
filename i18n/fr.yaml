@@ -25,6 +25,9 @@
 - id: words
   one: "One mot"
   other: "{{.Count}} mots"
+- id: taggedPosts
+  one: "Un article"
+  other: "{{.Count}} articles"
 
 # 404 page
 - id: pageNotFound

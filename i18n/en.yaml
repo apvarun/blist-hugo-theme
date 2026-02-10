@@ -25,6 +25,9 @@
 - id: words
   one: "One word"
   other: "{{.Count}} words"
+- id: taggedPosts
+  one: "One post"
+  other: "{{.Count}} posts"
 
 
 # 404 page

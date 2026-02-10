@@ -52,4 +52,16 @@
   a:empty {
     display: none;
   }
+
+  .tag-cloud {
+    background: inherit;
+    color: inherit;
+    width: 100%;
+    height: 420px;
+  }
+
+  .tag-cloud .tag-cloud-item,
+  .tag-cloud .tag-cloud-item a {
+    color: inherit !important;
+  }
 }

@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+  <h1 class="container px-6 pt-6 mx-auto text-3xl font-bold">{{ .Title }}</h1>
+
+  {{ if (or .Site.Params.tagCloud) }}
+    <div class="container p-6 pt-6 mx-auto">
+      <div id="tag-wrapper" style="width: 100%; height: 620px;"></div>
+
+      {{- $js := resources.Get "js/wordcloud2.js" -}}
+      {{- if $js -}}
+        {{- $js = $js | minify | fingerprint -}}
+        <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" ></script>
+      {{- end -}}
+      <script>
+
+      // Array: [ [tag, gewicht], ... ]
+      const tagArray = [];
+      const tagUrlMap = new Map();
+
+      {{ range $key, $pages := .Data.Terms }}
+        tagArray.push(["{{ $key }}", {{ len $pages }}, ]);
+        tagUrlMap.set("{{ $key }}", "{{ (printf "/tags/%s/" ($key | urlize)) | relLangURL }}");
+      {{ end }}
+
+      const tagWrapper = document.getElementById("tag-wrapper");
+
+      const rect = tagWrapper.getBoundingClientRect();
+      const w = Math.floor(rect.width);
+      const h = Math.floor(rect.height);
+
+      WordCloud(tagWrapper, {
+        list: tagArray,
+        classes: "tag-cloud-item",
+
+        origin: [w / 2, h / 2], // set to center
+
+        shrinkToFit: true,
+        drawOutOfBound: false,
+
+        minSize: 10,           // min font size
+        weightFactor: 12,      // factor (higher -> bigger)
+        gridSize: 18,          // smaller -> tighter, more words
+        backgroundColor: "rgba(0,0,0,0)", // transparent
+        color: "currentColor", // font color from parent
+        rotateRatio: 0.5       // 0..1, 0.5 -> 50% should be rotated
+      });
+
+      tagWrapper.addEventListener("wordcloudstop", function () {
+        document.querySelectorAll("#tag-wrapper .tag-cloud-item").forEach(function (el) {
+          const word = el.textContent.trim();
+          const url = tagUrlMap.get(word);
+          el.innerHTML = `<a href="${url}" style="color: inherit; text-decoration: none;">${word}</a>`;
+        });
+      });
+    </script>
+    </div>
+  {{ end }}
+
+  {{ if (or .Site.Params.tagList) }}
+    <div class="container p-6 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 lg:gap-2">
+      {{ range .Data.Terms.ByCount }}
+        <div class="p-2">
+          <a href="{{ .Page.Permalink }}">
+            <div class="my-2 text-xl font-semibold">{{ .Page.Title }}</div>
+          </a>
+          <div style="font-style: italic;font-size: smaller;">
+            {{ i18n "taggedPosts" .Count }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+{{ end }}

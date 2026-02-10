@@ -23,6 +23,9 @@
   translation: "minuto(s)"
 - id: words
   translation: "palabra(s)"
+- id: taggedPosts
+  one: "Un artículo"
+  other: "{{.Count}} artículos"
 
 
 # 404 page
