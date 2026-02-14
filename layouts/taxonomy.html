@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+  <h1 class="container px-6 pt-6 mx-auto text-3xl font-bold">{{ .Title }}</h1>
+
+  <div class="container p-6 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 lg:gap-2">
+    {{ range .Data.Terms.ByCount }}
+      <div class="p-2">
+        <a href="{{ .Page.Permalink }}">
+          <div class="my-2 text-xl font-semibold">{{ .Page.Title }}</div>
+        </a>
+        <div style="font-style: italic;font-size: smaller;">
+          {{ i18n "taggedPosts" .Count }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+
+{{ end }}

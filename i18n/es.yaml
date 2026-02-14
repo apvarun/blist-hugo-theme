@@ -23,7 +23,11 @@
   translation: "minuto(s)"
 - id: words
   translation: "palabra(s)"
-
+- id: toc
+  translation: "Tabla de contenido"
+- id: taggedPosts
+  one: "Un artículo"
+  other: "{{.Count}} artículos"
 
 # 404 page
 - id: pageNotFound
